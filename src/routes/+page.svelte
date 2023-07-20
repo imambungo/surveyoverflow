@@ -7,8 +7,8 @@
 
 	onMount(async () => {
 		const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
-		const TESTER = document.getElementById('tester');
-		Plotly.newPlot( TESTER, [{
+
+		Plotly.newPlot( 'tester', [{ // https://plotly.com/javascript/line-charts/#basic-line-plot
 			x: [1, 2, 3, 4, 5],
 			y: [1, 2, 4, 8, 16] }], {
 			margin: { t: 0 }
