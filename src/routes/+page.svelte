@@ -8,11 +8,20 @@
 	onMount(async () => {
 		const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
 
-		Plotly.newPlot( 'tester', [{ // https://plotly.com/javascript/line-charts/#basic-line-plot
-			x: [1, 2, 3, 4, 5],
-			y: [1, 2, 4, 8, 16] }], {
-			margin: { t: 0 }
-		})
+		const trace1 = {
+			x: [1, 2, 3, 4],
+			y: [10, 15, 13, 17],
+			type: 'scatter'
+		};
+
+		const trace2 = {
+			x: [1, 2, 3, 4],
+			y: [16, 5, 11, 9],
+			type: 'scatter'
+		};
+
+		const data = [trace1, trace2];
+		Plotly.newPlot( 'tester', data) // https://plotly.com/javascript/line-charts/#basic-line-plot
 	})
 
 </script>
