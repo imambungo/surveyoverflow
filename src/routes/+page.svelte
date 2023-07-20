@@ -26,8 +26,18 @@
 			type: 'scatter'
 		};
 
+		const layout = {
+			title: 'Title of the Graph',
+			xaxis: {
+				title: 'Popularity'
+			},
+			yaxis: {
+				title: 'Love'
+			}
+		}
+
 		const data = [javascript, sql];
-		Plotly.newPlot( 'tester', data) // https://plotly.com/javascript/line-charts/#basic-line-plot
+		Plotly.newPlot( 'tester', data, layout) // https://plotly.com/javascript/line-charts/
 	})
 
 </script>
