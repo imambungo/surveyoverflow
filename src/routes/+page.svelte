@@ -1,6 +1,6 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<div id="tester" style="width:600px;height:250px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
+<div id="tester" style="width:600px;height:600px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
 
 <script>
 	import { onMount } from 'svelte'
@@ -36,8 +36,13 @@
 			}
 		}
 
+		const config = { // https://plotly.com/javascript/configuration-options/
+			scrollZoom: true,
+			displayModeBar: false
+		}
+
 		const data = [javascript, sql];
-		Plotly.newPlot( 'tester', data, layout) // https://plotly.com/javascript/line-charts/
+		Plotly.newPlot( 'tester', data, layout, config) // https://plotly.com/javascript/line-charts/
 	})
 
 </script>
