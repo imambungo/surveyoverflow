@@ -8,19 +8,25 @@
 	onMount(async () => {
 		const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
 
-		const trace1 = {
-			x: [1, 2, 3, 4],
-			y: [10, 15, 13, 17],
+		const javascript = {
+			name: 'JavaScript',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019'],
+			x: [62.5, 69.8, 67.8], // popularity
+			y: [59.8, 61.9, 66.8], // love
 			type: 'scatter'
 		};
 
-		const trace2 = {
-			x: [1, 2, 3, 4],
-			y: [16, 5, 11, 9],
+		const sql = {
+			name: 'SQL',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019'],
+			x: [51.2, 57, 54.4],
+			y: [53.4, 57.5, 64.1],
 			type: 'scatter'
 		};
 
-		const data = [trace1, trace2];
+		const data = [javascript, sql];
 		Plotly.newPlot( 'tester', data) // https://plotly.com/javascript/line-charts/#basic-line-plot
 	})
 
