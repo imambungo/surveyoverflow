@@ -28,6 +28,7 @@
 
 		const layout = {
 			title: 'Title of the Graph',
+			dragmode: 'pan', // https://plotly.com/javascript/reference/#layout-dragmode
 			xaxis: {
 				title: 'Popularity',
 				range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
