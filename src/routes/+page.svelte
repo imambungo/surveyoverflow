@@ -38,7 +38,8 @@
 
 		const config = { // https://plotly.com/javascript/configuration-options/
 			scrollZoom: true,
-			displayModeBar: false
+			displayModeBar: false,
+			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
 		}
 
 		const data = [javascript, sql];
