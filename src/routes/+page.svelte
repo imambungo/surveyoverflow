@@ -29,10 +29,13 @@
 		const layout = {
 			title: 'Title of the Graph',
 			xaxis: {
-				title: 'Popularity'
+				title: 'Popularity',
+				range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
+				// consider: https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
 			},
 			yaxis: {
-				title: 'Love'
+				title: 'Love',
+				range: [0, 100],
 			}
 		}
 
