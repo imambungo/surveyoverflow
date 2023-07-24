@@ -35,6 +35,33 @@
 			type: 'scatter'
 		}
 
+		const cSharp = {
+			name: 'C#',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     34.1,   34.4,   31.0,   31.4,  27.86,  27.98,  27.62], // popularity
+			y: [     61.7,   60.4,   67.0,   59.7,  61.96,  63.39,  62.87], // love
+			type: 'scatter'
+		}
+
+		const python = {
+			name: 'Python',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     32.0,   38.8,   41.7,   44.1,  48.24,  48.07,  49.28], // popularity
+			y: [     62.7,   60.8,   73.1,   66.7,  67.83,  67.34,  65.52], // love
+			type: 'scatter'
+		}
+
+		const php = {
+			name: 'PHP',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     28.1,   30.7,   26.4,   26.2,  21.98,  20.87,  18.58], // popularity
+			y: [     41.4,   41.6,   45.8,   37.3,  40.24,  41.61,  41.83], // love
+			type: 'scatter'
+		}
+
 		const layout = {
 			title: 'Title of the Graph',
 			dragmode: false, // https://plotly.com/javascript/reference/#layout-dragmode
@@ -56,7 +83,7 @@
 			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
 		}
 
-		const data = [javascript, sql, java];
+		const data = [javascript, sql, java, cSharp, python, php];
 		Plotly.newPlot( 'tester', data, layout, config) // https://plotly.com/javascript/line-charts/
 	})
 
