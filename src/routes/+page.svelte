@@ -80,6 +80,15 @@
 			type: 'scatter'
 		}
 
+		const go = {
+			name: 'Go',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [      4.3,    7.1,    8.2,    8.8,   9.55,  11.15,  13.24], // popularity
+			y: [     63.3,   65.6,   67.9,   62.3,  62.74,  64.58,  62.45], // love
+			type: 'scatter'
+		}
+
 		const layout = {
 			title: 'Title of the Graph',
 			dragmode: false, // https://plotly.com/javascript/reference/#layout-dragmode
@@ -101,7 +110,7 @@
 			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
 		}
 
-		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby];
+		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go];
 		Plotly.newPlot( 'tester', data, layout, config) // https://plotly.com/javascript/line-charts/
 	})
 
