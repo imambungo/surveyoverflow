@@ -21,8 +21,17 @@
 			name: 'SQL',
 			mode: 'lines+markers',
 			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-			x: [     51.2,     57,   54.4,   54.7,   47.8,  49.43,  48.66],
-			y: [     53.4,   57.5,  64.1,    56.6,  61.83,  64.25,  64.26],
+			x: [     51.2,     57,   54.4,   54.7,   47.8,  49.43,  48.66], // popularity
+			y: [     53.4,   57.5,  64.1,    56.6,  61.83,  64.25,  64.26], // love
+			type: 'scatter'
+		}
+
+		const java = {
+			name: 'Java',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     39.7,   45.3,   41.1,   40.2,  35.35,  33.27,  30.55], // popularity
+			y: [     50.5,   50.7,   53.4,   44.1,  47.15,  45.75,  44.11], // love
 			type: 'scatter'
 		}
 
@@ -47,7 +56,7 @@
 			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
 		}
 
-		const data = [javascript, sql];
+		const data = [javascript, sql, java];
 		Plotly.newPlot( 'tester', data, layout, config) // https://plotly.com/javascript/line-charts/
 	})
 
