@@ -237,7 +237,25 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue]
+		const nodejs = {
+			name: 'Node.js',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     47.1,   49.6,   49.9,   51.4,  33.91,  47.12,  42.65], // popularity
+			y: [     62.1,   66.4,   72.1,   66.8,  63.22,  67.36,  64.63], // love
+			type: 'scatter'
+		}
+
+		const deno = {
+			name: 'Deno',
+			mode: 'lines+markers',
+			text: ['2021', '2022', '2023'],
+			x: [     1.41,   1.69,   2.36], // popularity
+			y: [    68.45,  72.32,  63.82], // love
+			type: 'scatter'
+		}
+
+		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, deno]
 		Plotly.newPlot('framework', framework_data, layout, config)
 
 
