@@ -2,6 +2,7 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <div id="tester" style="width:800px;height:800px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
 <div id="db" style="width:800px;height:800px;"></div>
+<div id="framework" style="width:800px;height:800px;"></div>
 
 <script>
 	import { onMount } from 'svelte'
@@ -143,6 +144,19 @@
 
 		const db_data = [mysql, postgresql, mongodb]
 		Plotly.newPlot('db', db_data, layout, config)
+
+
+		const react = {
+			name: 'React',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     19.5,   27.8,   31.3,   35.9,  40.14,  42.62,  40.58], // popularity
+			y: [     66.9,   69.4,   74.5,   68.9,  69.28,  68.19,  63.61], // love
+			type: 'scatter'
+		}
+
+		const framework_data = [react]
+		Plotly.newPlot('db', framework_data, layout, config)
 	})
 
 </script>
