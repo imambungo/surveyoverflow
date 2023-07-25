@@ -142,7 +142,16 @@
 			type: 'scatter'
 		}
 
-		const db_data = [mysql, postgresql, mongodb]
+		const sqlite = {
+			name: 'SQLite',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     26.6,   19.7,   31.6,   31.2,   32.8,  32.01,   30.9], // popularity
+			y: [     47.2,   48.1,   55.6,   49.4,  54.43,  57.51,  58.96], // love
+			type: 'scatter'
+		}
+
+		const db_data = [mysql, postgresql, mongodb, sqlite]
 		Plotly.newPlot('db', db_data, layout, config)
 
 
