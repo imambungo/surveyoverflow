@@ -155,7 +155,16 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react]
+		const svelte = {
+			name: 'Svelte',
+			mode: 'lines+markers',
+			text: ['2021', '2022', '2023'],
+			x: [     2.75,   4.58,   6.62], // popularity
+			y: [    71.47,  75.28,  74.50], // love
+			type: 'scatter'
+		}
+
+		const framework_data = [react, svelte]
 		Plotly.newPlot('db', framework_data, layout, config)
 	})
 
