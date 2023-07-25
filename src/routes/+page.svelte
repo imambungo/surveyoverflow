@@ -174,7 +174,7 @@
 		}
 
 		const framework_data = [react, angular, svelte]
-		Plotly.newPlot('db', framework_data, layout, config)
+		Plotly.newPlot('framework', framework_data, layout, config)
 	})
 
 </script>
