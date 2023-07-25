@@ -173,6 +173,15 @@
 			type: 'scatter'
 		}
 
+		const laravel = {
+			name: 'Laravel',
+			mode: 'lines+markers',
+			text: ['2019', '2020', '2021', '2022', '2023'],
+			x: [     10.5,   11.1,  10.12,   9.45,   7.58], // popularity
+			y: [     60.1,   51.4,  53.79,  54.47,  52.63], // love
+			type: 'scatter'
+		}
+
 		const svelte = {
 			name: 'Svelte',
 			mode: 'lines+markers',
@@ -182,7 +191,7 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, jquery, svelte]
+		const framework_data = [react, angular, jquery, laravel, svelte]
 		Plotly.newPlot('framework', framework_data, layout, config)
 	})
 
