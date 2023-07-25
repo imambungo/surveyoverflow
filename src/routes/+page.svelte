@@ -1,6 +1,7 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<div id="tester" style="width:600px;height:600px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
+<div id="tester" style="width:800px;height:800px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
+<div id="db" style="width:800px;height:800px;"></div>
 
 <script>
 	import { onMount } from 'svelte'
@@ -112,6 +113,36 @@
 
 		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go];
 		Plotly.newPlot( 'tester', data, layout, config) // https://plotly.com/javascript/line-charts/
+
+		const mysql = {
+			name: 'MySQL',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     55.6,   58.7,   54.0,   55.6,  50.18,  46.85,  41.09], // popularity
+			y: [     49.6,   48.7,   53.9,   47.1,  51.35,  51.17,  50.77], // love
+			type: 'scatter'
+		}
+
+		const postgresql = {
+			name: 'PostgreSQL',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     26.5,   32.9,   34.3,   36.1,  40.42,  43.59,  45.55], // popularity
+			y: [     60.8,   62.0,   69.6,   63.9,  70.40,  72.08,  71.32], // love
+			type: 'scatter'
+		}
+
+		const mongodb = {
+			name: 'MongoDB',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     21.0,   25.9,   25.5,   26.4,   27.7,   28.3,  25.52], // popularity
+			y: [     55.0,   55.1,   59.5,   56.0,  60.28,  60.51,  55.21], // love
+			type: 'scatter'
+		}
+
+		const db_data = [mysql, postgresql, mongodb]
+		Plotly.newPlot('db', db_data, layout, config)
 	})
 
 </script>
