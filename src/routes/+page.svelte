@@ -218,7 +218,16 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, jquery, laravel, express, svelte]
+		const nextjs = {
+			name: 'Next.js',
+			mode: 'lines+markers',
+			text: ['2022', '2023'],
+			x: [    13.52,  16.67], // popularity
+			y: [    69.23,  65.95], // love
+			type: 'scatter'
+		}
+
+		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs]
 		Plotly.newPlot('framework', framework_data, layout, config)
 	})
 
