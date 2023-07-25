@@ -164,6 +164,15 @@
 			type: 'scatter'
 		}
 
+		const jquery = {
+			name: 'jQuery',
+			mode: 'lines+markers',
+			text: ['2019', '2020', '2021', '2022', '2023'],
+			x: [     48.7,   43.3,  34.42,  28.57,  21.98], // popularity
+			y: [     45.3,   36.5,  35.29,   34.0,  32.89], // love
+			type: 'scatter'
+		}
+
 		const svelte = {
 			name: 'Svelte',
 			mode: 'lines+markers',
@@ -173,7 +182,7 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, svelte]
+		const framework_data = [react, angular, jquery, svelte]
 		Plotly.newPlot('framework', framework_data, layout, config)
 	})
 
