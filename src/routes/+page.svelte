@@ -101,6 +101,15 @@
 			type: 'scatter'
 		}
 
+		const c = {
+			name: 'C',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     19.0,   23.0,   20.6,   21.8,  21.01,  19.27,  19.34], // popularity
+			y: [     41.7,   37.4,   42.5,   33.1,  39.56,  39.68,  43.29], // love
+			type: 'scatter'
+		}
+
 		const kotlin = {
 			name: 'Kotlin',
 			mode: 'lines+markers',
@@ -149,7 +158,7 @@
 			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
 		}
 
-		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust];
+		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
 		Plotly.newPlot( 'tester', data, {...layout, title: 'Programming, scripting, and markup languages'}, config) // https://plotly.com/javascript/line-charts/
 
 		const mysql = {
