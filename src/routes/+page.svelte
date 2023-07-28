@@ -273,6 +273,15 @@
 			type: 'scatter'
 		}
 
+		const flask = {
+			name: 'Flask',
+			mode: 'lines+markers',
+			text: ['2019', '2020', '2021', '2022', '2023'],
+			x: [     12.1,   14.2,  16.14,  14.64,  12.16], // popularity
+			y: [     61.1,   54.4,  51.04,  48.41,  45.36], // love
+			type: 'scatter'
+		}
+
 		const wordpress = {
 			name: 'WordPress',
 			mode: 'lines+markers',
@@ -291,7 +300,7 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, deno, wordpress]
+		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, deno, wordpress]
 		Plotly.newPlot('framework', framework_data, {...layout, title: 'Web frameworks and technologies'}, config)
 
 
