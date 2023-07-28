@@ -246,6 +246,15 @@
 			type: 'scatter'
 		}
 
+		const gatsby = {
+			name: 'Gatsby',
+			mode: 'lines+markers',
+			text: ['2020', '2021', '2022', '2023'],
+			x: [      4.0,   3.97,   3.46,   2.33], // popularity
+			y: [     60.7,  48.66,  35.57,  28.66], // love
+			type: 'scatter'
+		}
+
 		const svelte = {
 			name: 'Svelte',
 			mode: 'lines+markers',
@@ -327,7 +336,7 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, fastapi, deno, wordpress]
+		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, fastapi, deno, wordpress, gatsby]
 		Plotly.newPlot('framework', framework_data, {...layout, title: 'Web frameworks and technologies'}, config)
 
 
