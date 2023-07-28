@@ -246,6 +246,15 @@
 			type: 'scatter'
 		}
 
+		const fastapi = {
+			name: 'FastAPI',
+			mode: 'lines+markers',
+			text: ['2021', '2022', '2023'],
+			x: [     3.88,   6.02,   7.42], // popularity
+			y: [    70.04,  67.74,  64.49], // love
+			type: 'scatter'
+		}
+
 		const nextjs = {
 			name: 'Next.js',
 			mode: 'lines+markers',
@@ -309,7 +318,7 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, deno, wordpress]
+		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, fastapi, deno, wordpress]
 		Plotly.newPlot('framework', framework_data, {...layout, title: 'Web frameworks and technologies'}, config)
 
 
