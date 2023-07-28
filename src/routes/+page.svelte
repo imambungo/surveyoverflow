@@ -246,6 +246,15 @@
 			type: 'scatter'
 		}
 
+		const rails = {
+			name: 'Ruby on Rails',
+			mode: 'lines+markers',
+			text: ['2019', '2020', '2021', '2022', '2023'],
+			x: [      8.2,    7.0,   7.04,   5.83,   5.49], // popularity
+			y: [     57.1,   49.3,  57.55,  55.34,  52.97], // love
+			type: 'scatter'
+		}
+
 		const gatsby = {
 			name: 'Gatsby',
 			mode: 'lines+markers',
@@ -336,7 +345,7 @@
 			type: 'scatter'
 		}
 
-		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, fastapi, deno, wordpress, gatsby]
+		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, fastapi, deno, wordpress, gatsby, rails]
 		Plotly.newPlot('framework', framework_data, {...layout, title: 'Web frameworks and technologies'}, config)
 
 
