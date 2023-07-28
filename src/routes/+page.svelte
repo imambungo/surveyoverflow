@@ -123,7 +123,7 @@
 		}
 
 		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, rust];
-		Plotly.newPlot( 'tester', data, layout, config) // https://plotly.com/javascript/line-charts/
+		Plotly.newPlot( 'tester', data, {...layout, title: 'Programming, scripting, and markup languages'}, config) // https://plotly.com/javascript/line-charts/
 
 		const mysql = {
 			name: 'MySQL',
@@ -162,7 +162,7 @@
 		}
 
 		const db_data = [mysql, postgresql, mongodb, sqlite]
-		Plotly.newPlot('db', db_data, layout, config)
+		Plotly.newPlot('db', db_data, {...layout, title: 'Databases'}, config)
 
 
 		const react = {
@@ -256,7 +256,7 @@
 		}
 
 		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, deno]
-		Plotly.newPlot('framework', framework_data, layout, config)
+		Plotly.newPlot('framework', framework_data, {...layout, title: 'Web frameworks and technologies'}, config)
 
 
 		const react_native = {
@@ -278,7 +278,7 @@
 		}
 
 		const other_data = [react_native, flutter]
-		Plotly.newPlot('other', other_data, layout, config)
+		Plotly.newPlot('other', other_data, {...layout, title: 'Other frameworks and libraries'}, config)
 	})
 
 </script>
