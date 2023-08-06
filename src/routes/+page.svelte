@@ -158,11 +158,11 @@
 			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
 		}
 
-		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
-		Plotly.newPlot( 'programming_languages', data, {
+		const pl_data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
+		Plotly.newPlot( 'programming_languages', pl_data, {
 			...layout,
 			title: 'Programming, scripting, and markup languages',
-			annotations: data.map(pl_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: pl_data.map(pl_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 				x: pl_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
 				y: pl_data.y.at(-1),
 				xref: 'x',
