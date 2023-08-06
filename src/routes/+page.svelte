@@ -209,7 +209,18 @@
 		}
 
 		const db_data = [mysql, postgresql, mongodb, sqlite]
-		Plotly.newPlot('db', db_data, {...layout, title: 'Databases'}, config)
+		Plotly.newPlot('db', db_data, {
+			...layout,
+			title: 'Databases',
+			annotations: db_data.map(db_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+				x: db_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
+				y: db_data.y.at(-1),
+				xref: 'x',
+				yref: 'y',
+				text: db_data.name,
+				showarrow: false
+			}))
+		}, config) // https://plotly.com/javascript/line-charts/
 
 
 		const react = {
@@ -357,7 +368,18 @@
 		}
 
 		const framework_data = [react, angular, jquery, laravel, express, svelte, nextjs, vue, nodejs, django, flask, fastapi, deno, wordpress, gatsby, rails]
-		Plotly.newPlot('framework', framework_data, {...layout, title: 'Web frameworks and technologies'}, config)
+		Plotly.newPlot('framework', framework_data, {
+			...layout,
+			title: 'Web frameworks and technologies',
+			annotations: framework_data.map(framework_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+				x: framework_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
+				y: framework_data.y.at(-1),
+				xref: 'x',
+				yref: 'y',
+				text: framework_data.name,
+				showarrow: false
+			}))
+		}, config) // https://plotly.com/javascript/line-charts/
 
 
 		const react_native = {
@@ -379,7 +401,18 @@
 		}
 
 		const other_data = [react_native, flutter]
-		Plotly.newPlot('other', other_data, {...layout, title: 'Other frameworks and libraries'}, config)
+		Plotly.newPlot('other', other_data, {
+			...layout,
+			title: 'Other frameworks and libraries',
+			annotations: other_data.map(other_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+				x: other_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
+				y: other_data.y.at(-1),
+				xref: 'x',
+				yref: 'y',
+				text: other_data.name,
+				showarrow: false
+			}))
+		}, config) // https://plotly.com/javascript/line-charts/
 	})
 
 </script>
