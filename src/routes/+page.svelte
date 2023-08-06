@@ -162,16 +162,14 @@
 		Plotly.newPlot( 'programming_languages', data, {
 			...layout,
 			title: 'Programming, scripting, and markup languages',
-			annotations: [ // https://plotly.com/javascript/text-and-annotations/#simple-annotation
-				{
-					x: 63.61,
-					y: 57.83,
-					xref: 'x',
-					yref: 'y',
-					text: 'JavaScript',
-					showarrow: false,
-				}
-			]
+			annotations: data.map(pl_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+				x: pl_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
+				y: pl_data.y.at(-1),
+				xref: 'x',
+				yref: 'y',
+				text: pl_data.name,
+				showarrow: false
+			}))
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const mysql = {
