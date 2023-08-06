@@ -171,8 +171,8 @@
 				showarrow: false,
 				font: {
 					size: 14,
-					//color: '#ffffff'
       		},
+				yshift: 9
 			}))
 		}, config) // https://plotly.com/javascript/line-charts/
 
