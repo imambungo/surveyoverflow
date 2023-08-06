@@ -139,16 +139,16 @@
 
 		const layout = {
 			title: 'Title of the Graph',
-			dragmode: false, // https://plotly.com/javascript/reference/#layout-dragmode
+			dragmode: 'pan', // false, // https://plotly.com/javascript/reference/#layout-dragmode
 			xaxis: {
 				title: 'Popularity',
 				range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
-				fixedrange: true // https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
+				//fixedrange: true // prevents zoom | https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
 			},
 			yaxis: {
 				title: 'Love',
 				range: [0, 100],
-				fixedrange: true
+				//fixedrange: true
 			}
 		}
 
@@ -168,7 +168,11 @@
 				xref: 'x',
 				yref: 'y',
 				text: pl_data.name,
-				showarrow: false
+				showarrow: false,
+				font: {
+					size: 14,
+					//color: '#ffffff'
+      		},
 			}))
 		}, config) // https://plotly.com/javascript/line-charts/
 
