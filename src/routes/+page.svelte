@@ -158,22 +158,24 @@
 			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
 		}
 
+		const dataToAnnotations = data => data.map(data => ({  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			x: data.x.at(-1),  // https://stackoverflow.com/a/3216041/9157799
+			y: data.y.at(-1),
+			xref: 'x',
+			yref: 'y',
+			text: data.name,
+			showarrow: false,
+			font: {
+				size: 14,
+			},
+			yshift: 9  // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-yshift
+		}))
+
 		const pl_data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
 		Plotly.newPlot('programming_languages', pl_data, {
 			...layout,
 			title: 'Programming, scripting, and markup languages',
-			annotations: pl_data.map(pl_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-				x: pl_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
-				y: pl_data.y.at(-1),
-				xref: 'x',
-				yref: 'y',
-				text: pl_data.name,
-				showarrow: false,
-				font: {
-					size: 14,
-      		},
-				yshift: 9
-			}))
+			annotations: dataToAnnotations(pl_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const mysql = {
@@ -216,14 +218,7 @@
 		Plotly.newPlot('db', db_data, {
 			...layout,
 			title: 'Databases',
-			annotations: db_data.map(db_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-				x: db_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
-				y: db_data.y.at(-1),
-				xref: 'x',
-				yref: 'y',
-				text: db_data.name,
-				showarrow: false
-			}))
+			annotations: dataToAnnotations(db_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 
@@ -375,14 +370,7 @@
 		Plotly.newPlot('framework', framework_data, {
 			...layout,
 			title: 'Web frameworks and technologies',
-			annotations: framework_data.map(framework_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-				x: framework_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
-				y: framework_data.y.at(-1),
-				xref: 'x',
-				yref: 'y',
-				text: framework_data.name,
-				showarrow: false
-			}))
+			annotations: dataToAnnotations(framework_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 
@@ -408,14 +396,7 @@
 		Plotly.newPlot('other', other_data, {
 			...layout,
 			title: 'Other frameworks and libraries',
-			annotations: other_data.map(other_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-				x: other_data.x.at(-1), // https://stackoverflow.com/a/3216041/9157799
-				y: other_data.y.at(-1),
-				xref: 'x',
-				yref: 'y',
-				text: other_data.name,
-				showarrow: false
-			}))
+			annotations: dataToAnnotations(other_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 	})
 
