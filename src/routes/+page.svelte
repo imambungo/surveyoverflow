@@ -1,6 +1,6 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<div id="tester" style="width:800px;height:800px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
+<div id="programming_languages" style="width:800px;height:800px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
 <div id="db" style="width:800px;height:800px;"></div>
 <div id="framework" style="width:800px;height:800px;"></div>
 <div id="other" style="width:800px;height:800px;"></div>
@@ -159,7 +159,7 @@
 		}
 
 		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
-		Plotly.newPlot( 'tester', data, {...layout, title: 'Programming, scripting, and markup languages'}, config) // https://plotly.com/javascript/line-charts/
+		Plotly.newPlot( 'programming_languages', data, {...layout, title: 'Programming, scripting, and markup languages'}, config) // https://plotly.com/javascript/line-charts/
 
 		const mysql = {
 			name: 'MySQL',
