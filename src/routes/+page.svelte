@@ -159,7 +159,7 @@
 		}
 
 		const pl_data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
-		Plotly.newPlot( 'programming_languages', pl_data, {
+		Plotly.newPlot('programming_languages', pl_data, {
 			...layout,
 			title: 'Programming, scripting, and markup languages',
 			annotations: pl_data.map(pl_data => ({ // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
