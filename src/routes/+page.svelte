@@ -159,7 +159,20 @@
 		}
 
 		const data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
-		Plotly.newPlot( 'programming_languages', data, {...layout, title: 'Programming, scripting, and markup languages'}, config) // https://plotly.com/javascript/line-charts/
+		Plotly.newPlot( 'programming_languages', data, {
+			...layout,
+			title: 'Programming, scripting, and markup languages',
+			annotations: [ // https://plotly.com/javascript/text-and-annotations/#simple-annotation
+				{
+					x: 63.61,
+					y: 57.83,
+					xref: 'x',
+					yref: 'y',
+					text: 'JavaScript',
+					showarrow: false,
+				}
+			]
+		}, config) // https://plotly.com/javascript/line-charts/
 
 		const mysql = {
 			name: 'MySQL',
