@@ -400,6 +400,13 @@
 				y: [    59.23,  59.42,  59.93], // love
 				type: 'scatter'
 			}, {
+				name: 'DigitalOcean',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    17.67,  15.64,  13.37], // popularity
+				y: [    58.85,  57.61,  53.04], // love
+				type: 'scatter'
+			}, {
 				name: 'AWS',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
