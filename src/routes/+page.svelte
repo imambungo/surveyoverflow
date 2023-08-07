@@ -393,6 +393,13 @@
 				y: [    59.65,  58.18,  55.13], // love
 				type: 'scatter'
 			}, {
+				name: 'Microsoft Azure',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    30.77,  28.72,  26.03], // popularity
+				y: [    59.23,  59.42,  59.93], // love
+				type: 'scatter'
+			}, {
 				name: 'AWS',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
