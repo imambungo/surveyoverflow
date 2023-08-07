@@ -245,6 +245,13 @@
 				y: [     70.7,  71.47,  71.49,  70.89], // love
 				type: 'scatter'
 			}, {
+				name: 'Spring Boot',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [    11.95], // popularity
+				y: [    59.49], // love
+				type: 'scatter'
+			}, {
 				name: 'Express',
 				mode: 'lines+markers',
 				text: ['2019', '2020', '2021', '2022', '2023'],
