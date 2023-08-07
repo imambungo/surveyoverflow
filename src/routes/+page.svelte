@@ -1,5 +1,6 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>Double-click anywhere on the plot area to reset the zoom level.</p>
 <div id="programming_languages" style="width:800px;height:800px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
 <div id="db" style="width:800px;height:800px;"></div>
 <div id="framework" style="width:800px;height:800px;"></div>
