@@ -110,6 +110,15 @@
 			type: 'scatter'
 		}
 
+		const cpp = {
+			name: 'C++',
+			mode: 'lines+markers',
+			text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+			x: [     22.3,   25.4,   23.5,   23.9,  24.31,  22.55,  22.42], // popularity
+			y: [     52.0,   46.7,   52.0,   43.4,  49.24,  48.39,  49.77], // love
+			type: 'scatter'
+		}
+
 		const kotlin = {
 			name: 'Kotlin',
 			mode: 'lines+markers',
@@ -171,7 +180,7 @@
 			yshift: 9  // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-yshift
 		}))
 
-		const pl_data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c];
+		const pl_data = [javascript, sql, java, cSharp, python, php, typescript, ruby, go, kotlin, swift, dart, rust, c, cpp];
 		Plotly.newPlot('programming_languages', pl_data, {
 			...layout,
 			title: 'Programming, scripting, and markup languages',
