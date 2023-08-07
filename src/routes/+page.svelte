@@ -127,6 +127,7 @@
 				title: 'Popularity',
 				range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
 				//fixedrange: true // prevents zoom | https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
+				scaleanchor: 'y', // https://community.plotly.com/t/autoscale-y-axis-on-double-click-for-data-in-view/74537/3?u=imambungo
 			},
 			yaxis: {
 				title: 'Love',
