@@ -386,6 +386,13 @@
 				y: [    57.45,  54.46], // love
 				type: 'scatter'
 			}, {
+				name: 'Cloudflare',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [    15.24], // popularity
+				y: [    66.19], // love
+				type: 'scatter'
+			}, {
 				name: 'Google Cloud',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
