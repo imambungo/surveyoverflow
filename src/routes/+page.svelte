@@ -407,6 +407,13 @@
 				y: [    58.85,  57.61,  53.04], // love
 				type: 'scatter'
 			}, {
+				name: 'Heroku',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [       24,  19.98,  12.02], // popularity
+				y: [    48.17,  43.65,  21.97], // love
+				type: 'scatter'
+			}, {
 				name: 'AWS',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
