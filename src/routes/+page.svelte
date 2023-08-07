@@ -421,6 +421,13 @@
 				y: [    42.80,  50.90,  55.08], // love
 				type: 'scatter'
 			}, {
+				name: 'IBM Cloud or Watson',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [     2.55,   1.68,   1.15], // popularity
+				y: [    37.29,  36.69,  32.21], // love
+				type: 'scatter'
+			}, {
 				name: 'AWS',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
