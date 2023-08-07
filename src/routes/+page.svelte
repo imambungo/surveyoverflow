@@ -4,7 +4,8 @@
 <div id="programming_languages" style="width:800px;height:800px;"></div> <!-- https://plotly.com/javascript/getting-started/ -->
 <div id="db" style="width:800px;height:800px;"></div>
 <div id="framework" style="width:800px;height:800px;"></div>
-<div id="other" style="width:800px;height:800px;"></div>
+<div id="other_frameworks" style="width:800px;height:800px;"></div>
+<div id="cloud_platforms" style="width:800px;height:800px;"></div>
 
 <script>
 	import { onMount } from 'svelte'
@@ -352,7 +353,7 @@
 		}, config) // https://plotly.com/javascript/line-charts/
 
 
-		const other_data = [
+		const other_frameworks_data = [
 			{
 				name: 'React Native',
 				mode: 'lines+markers',
@@ -370,10 +371,41 @@
 			}
 		]
 
-		Plotly.newPlot('other', other_data, {
+		Plotly.newPlot('other_frameworks', other_frameworks_data, {
 			...layout,
 			title: 'Other frameworks and libraries',
-			annotations: dataToAnnotations(other_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: dataToAnnotations(other_frameworks_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		}, config) // https://plotly.com/javascript/line-charts/
+
+		const cloud_platforms_data = [ // don't use data from before 2021 since they're not specifically cloud platforms
+			{
+				name: 'Firebase',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [    21.14,  15.47], // popularity
+				y: [    57.45,  54.46], // love
+				type: 'scatter'
+			}, {
+				name: 'Google Cloud',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    31.05,  26.81,  23.86], // popularity
+				y: [    59.65,  58.18,  55.13], // love
+				type: 'scatter'
+			}, {
+				name: 'AWS',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    54.22,  51.01,  48.62], // popularity
+				y: [    66.55,  66.32,  62.24], // love
+				type: 'scatter'
+			}
+		]
+
+		Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
+			...layout,
+			title: 'Cloud platforms',
+			annotations: dataToAnnotations(cloud_platforms_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 	})
 
