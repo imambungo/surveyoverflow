@@ -229,6 +229,13 @@
 				y: [     60.1,   51.4,  53.79,  54.47,  52.63], // love
 				type: 'scatter'
 			}, {
+				name: 'ASP.NET',
+				mode: 'lines+markers',
+				text: ['2019', '2020', '2021', '2022', '2023'],
+				x: [     26.3,   21.9,  15.74,   14.9,  12.79], // popularity
+				y: [     64.9,   36.9,  36.40,  37.63,  38.26], // love
+				type: 'scatter'
+			}, {
 				name: 'Express',
 				mode: 'lines+markers',
 				text: ['2019', '2020', '2021', '2022', '2023'],
