@@ -437,6 +437,13 @@
 				y: [    68.85,  70.39,  64.61], // love
 				type: 'scatter'
 			}, {
+				name: 'Atom',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    12.94,   9.35,   5.63], // popularity
+				y: [    33.07,  30.80,  19.12], // love
+				type: 'scatter'
+			}, {
 				name: 'Nano',
 				mode: 'lines+markers',
 				text: ['2022', '2023'],
