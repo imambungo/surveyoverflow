@@ -541,6 +541,13 @@
 				y: [    69.18], // love
 				type: 'scatter'
 			}, {
+				name: 'Vultr',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [     1.95], // popularity
+				y: [    50.77], // love
+				type: 'scatter'
+			}, {
 				name: 'Netlify',
 				mode: 'lines+markers',
 				text: ['2023'],
