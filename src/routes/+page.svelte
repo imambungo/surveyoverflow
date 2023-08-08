@@ -541,6 +541,13 @@
 				y: [    69.18], // love
 				type: 'scatter'
 			}, {
+				name: 'Netlify',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [     8.95], // popularity
+				y: [    52.73], // love
+				type: 'scatter'
+			}, {
 				name: 'Google Cloud',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
