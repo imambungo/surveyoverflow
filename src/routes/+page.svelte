@@ -534,6 +534,13 @@
 				y: [    66.19], // love
 				type: 'scatter'
 			}, {
+				name: 'Vercel',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [    10.68], // popularity
+				y: [    69.18], // love
+				type: 'scatter'
+			}, {
 				name: 'Google Cloud',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
