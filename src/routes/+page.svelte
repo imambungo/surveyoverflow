@@ -395,6 +395,13 @@
 				y: [    82.36,  82.92,  81.43], // love
 				type: 'scatter'
 			}, {
+				name: 'Visual Studio',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    33.03,  32.15,  28.43], // popularity
+				y: [    60.00,  60.76,  59.98], // love
+				type: 'scatter'
+			}, {
 				name: 'Notepad++',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
