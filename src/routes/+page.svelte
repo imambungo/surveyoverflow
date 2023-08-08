@@ -430,6 +430,13 @@
 				y: [    51.39,  50.74,  52.04], // love
 				type: 'scatter'
 			}, {
+				name: 'Nano',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [     9.26,   8.98], // popularity
+				y: [    57.49,  57.25], // love
+				type: 'scatter'
+			}, {
 				name: 'Vim',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
