@@ -527,6 +527,13 @@
 				y: [    57.45,  54.46], // love
 				type: 'scatter'
 			}, {
+				name: 'Linode, now Akamai',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [     3.92,   3.96], // popularity
+				y: [    56.47,  49.98], // love
+				type: 'scatter'
+			}, {
 				name: 'Cloudflare',
 				mode: 'lines+markers',
 				text: ['2023'],
