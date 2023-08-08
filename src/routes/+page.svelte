@@ -437,6 +437,13 @@
 				y: [    68.85,  70.39,  64.61], // love
 				type: 'scatter'
 			}, {
+				name: 'Xcode',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    11.07,  10.53,   9.45], // popularity
+				y: [    52.38,  50.22,  49.12], // love
+				type: 'scatter'
+			}, {
 				name: 'Atom',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
