@@ -409,6 +409,13 @@
 				y: [    67.65,  68.08,  66.39], // love
 				type: 'scatter'
 			}, {
+				name: 'Android Studio',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    22.22,   19.8,  16.82], // popularity
+				y: [    50.28,  49.41,  46.72], // love
+				type: 'scatter'
+			}, {
 				name: 'Notepad++',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
