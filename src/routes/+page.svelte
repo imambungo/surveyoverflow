@@ -395,6 +395,13 @@
 				y: [    82.36,  82.92,  81.43], // love
 				type: 'scatter'
 			}, {
+				name: 'Notepad++',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    29.71,  27.71,  24.54], // popularity
+				y: [    56.24,  58.85,  60.28], // love
+				type: 'scatter'
+			}, {
 				name: 'Vim',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
