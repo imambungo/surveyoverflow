@@ -402,6 +402,13 @@
 				y: [    56.24,  58.85,  60.28], // love
 				type: 'scatter'
 			}, {
+				name: 'Sublime Text',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    20.47,  16.51,  12.61], // popularity
+				y: [    51.39,  50.74,  52.04], // love
+				type: 'scatter'
+			}, {
 				name: 'Vim',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
