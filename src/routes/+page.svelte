@@ -430,6 +430,13 @@
 				y: [    51.39,  50.74,  52.04], // love
 				type: 'scatter'
 			}, {
+				name: 'Emacs',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [      5.3,   4.51,   4.69], // popularity
+				y: [    68.85,  70.39,  64.61], // love
+				type: 'scatter'
+			}, {
 				name: 'Nano',
 				mode: 'lines+markers',
 				text: ['2022', '2023'],
