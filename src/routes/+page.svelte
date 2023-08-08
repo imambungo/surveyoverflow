@@ -541,6 +541,13 @@
 				y: [    66.19], // love
 				type: 'scatter'
 			}, {
+				name: 'Hetzner',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [     4.41], // popularity
+				y: [    70.09], // love
+				type: 'scatter'
+			}, {
 				name: 'Vercel',
 				mode: 'lines+markers',
 				text: ['2023'],
