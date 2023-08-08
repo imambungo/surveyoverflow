@@ -402,6 +402,13 @@
 				y: [    60.00,  60.76,  59.98], // love
 				type: 'scatter'
 			}, {
+				name: 'IntelliJ IDEA',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    28.74,  27.97,  26.82], // popularity
+				y: [    67.65,  68.08,  66.39], // love
+				type: 'scatter'
+			}, {
 				name: 'Notepad++',
 				mode: 'lines+markers',
 				text: ['2021', '2022', '2023'],
