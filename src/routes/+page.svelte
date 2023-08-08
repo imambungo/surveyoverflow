@@ -7,6 +7,7 @@
 <div id="other_frameworks" style="width:800px;height:800px;"></div>
 <div id="cloud_platforms" style="width:800px;height:800px;"></div>
 <div id="other_tools" style="width:800px;height:800px;"></div>
+<div id="ide" style="width:800px;height:800px;"></div>
 
 <script>
 	import { onMount } from 'svelte'
@@ -376,6 +377,37 @@
 			...layout,
 			title: 'Other frameworks and libraries',
 			annotations: dataToAnnotations(other_frameworks_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		}, config) // https://plotly.com/javascript/line-charts/
+
+		const ide_data = [
+			{
+				name: 'Visual Studio Code',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    71.06,  74.48,  73.71], // popularity
+				y: [    79.30,  81.00,  76.98], // love
+				type: 'scatter'
+			}, {
+				name: 'Neovim',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [     4.99,   6.75,  11.88], // popularity
+				y: [    82.36,  82.92,  81.43], // love
+				type: 'scatter'
+			}, {
+				name: 'Vim',
+				mode: 'lines+markers',
+				text: ['2021', '2022', '2023'],
+				x: [    24.19,  23.34,  22.29], // popularity
+				y: [    69.70,  69.69,  66.74], // love
+				type: 'scatter'
+			}
+		]
+
+		Plotly.newPlot('ide', ide_data, {
+			...layout,
+			title: 'Integrated development environment',
+			annotations: dataToAnnotations(ide_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const other_tools_data = [  // 2022 onwards. Don't use data from 2021 because git is removed since 2022.
