@@ -6,6 +6,7 @@
 <div id="framework" style="width:800px;height:800px;"></div>
 <div id="other_frameworks" style="width:800px;height:800px;"></div>
 <div id="cloud_platforms" style="width:800px;height:800px;"></div>
+<div id="other_tools" style="width:800px;height:800px;"></div>
 
 <script>
 	import { onMount } from 'svelte'
@@ -375,6 +376,51 @@
 			...layout,
 			title: 'Other frameworks and libraries',
 			annotations: dataToAnnotations(other_frameworks_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		}, config) // https://plotly.com/javascript/line-charts/
+
+		const other_tools_data = [  // 2022 onwards. Don't use data from 2021 because git is removed since 2022.
+			{
+				name: 'Docker',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [    63.72,  51.55], // popularity
+				y: [    76.93,  74.99], // love
+				type: 'scatter'
+			}, {
+				name: 'Yarn',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [    27.64,  21.86], // popularity
+				y: [    61.90,  54.44], // love
+				type: 'scatter'
+			}, {
+				name: 'pnpm',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [     6.28], // popularity
+				y: [    71.86], // love
+				type: 'scatter'
+			}, {
+				name: 'Bun',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [     0.77], // popularity
+				y: [    66.77], // love
+				type: 'scatter'
+			}, {
+				name: 'npm',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [    65.17,  49.36], // popularity
+				y: [    62.85,  59.67], // love
+				type: 'scatter'
+			}
+		]
+
+		Plotly.newPlot('other_tools', other_tools_data, {
+			...layout,
+			title: 'Other tools',
+			annotations: dataToAnnotations(other_tools_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const cloud_platforms_data = [ // don't use data from before 2021 since they're not specifically cloud platforms
