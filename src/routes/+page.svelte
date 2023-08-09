@@ -431,6 +431,13 @@
 				y: [    81.83], // love
 				type: 'scatter'
 			}, {
+				name: 'GitHub Discussions',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [    16.98], // popularity
+				y: [    70.19], // love
+				type: 'scatter'
+			}, {
 				name: 'Confluence',
 				mode: 'lines+markers',
 				text: ['2022', '2023'],
