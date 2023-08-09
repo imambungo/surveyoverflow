@@ -7,7 +7,7 @@
 	<h1>Welcome to SvelteKit</h1>
 	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 	<p>Double-click anywhere on the plot area to reset the zoom level.</p>
-	<div id="programming_languages" class='aspect-square landscape:h-screen'></div> <!-- https://plotly.com/javascript/getting-started/ -->
+	<div id="programming_languages" class='landscape:h-screen'></div> <!-- https://plotly.com/javascript/getting-started/ -->
 	<!-- <div id="db" class='lg:min-h-screen'></div>
 	<div id="framework" class='lg:min-h-screen'></div>
 	<div id="other_frameworks" class='lg:min-h-screen'></div>
@@ -145,6 +145,15 @@
 				title: 'Love',
 				range: [0, 100],
 				//fixedrange: true
+			},
+			legend: {
+				orientation: 'h',  // https://plotly.com/javascript/legend/#changing-the-orientation-of-legend | https://plotly.com/javascript/reference/layout/#layout-legend-orientation
+			},
+			margin: {  // https://plotly.com/javascript/reference/layout/#layout-margin
+				b: 35,
+				l: 35,
+				r: 35,
+				t: 35
 			}
 		}
 
