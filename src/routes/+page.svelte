@@ -424,6 +424,13 @@
 				y: [    74.03], // love
 				type: 'scatter'
 			}, {
+				name: 'Markdown File',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [    26.17], // popularity
+				y: [    81.83], // love
+				type: 'scatter'
+			}, {
 				name: 'Confluence',
 				mode: 'lines+markers',
 				text: ['2022', '2023'],
