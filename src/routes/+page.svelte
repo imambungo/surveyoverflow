@@ -403,6 +403,13 @@
 				y: [    66.82,  64.28], // love
 				type: 'scatter'
 			}, {
+				name: 'Linear',
+				mode: 'lines+markers',
+				text: ['2023'],
+				x: [     2.07], // popularity
+				y: [    74.03], // love
+				type: 'scatter'
+			}, {
 				name: 'Confluence',
 				mode: 'lines+markers',
 				text: ['2022', '2023'],
