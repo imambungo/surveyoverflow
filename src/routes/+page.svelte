@@ -403,6 +403,13 @@
 				y: [    66.82,  64.28], // love
 				type: 'scatter'
 			}, {
+				name: 'Asana',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [     7.91,   5.04], // popularity
+				y: [    37.79,  36.95], // love
+				type: 'scatter'
+			}, {
 				name: 'Linear',
 				mode: 'lines+markers',
 				text: ['2023'],
