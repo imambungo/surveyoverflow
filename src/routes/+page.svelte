@@ -162,7 +162,7 @@
 			text: data.name,
 			showarrow: false,
 			font: {
-				size: 13,
+				size: 12,
 			},
 			yshift: 9  // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-yshift
 		}))
