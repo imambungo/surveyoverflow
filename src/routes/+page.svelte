@@ -410,6 +410,13 @@
 				y: [    37.79,  36.95], // love
 				type: 'scatter'
 			}, {
+				name: 'Airtable',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [     2.94,   2.13], // popularity
+				y: [    43.39,  38.50], // love
+				type: 'scatter'
+			}, {
 				name: 'Linear',
 				mode: 'lines+markers',
 				text: ['2023'],
