@@ -1,3 +1,8 @@
+<svelte:head>
+   <title>Survey Overflow - Stack Overflow survey trends over the years</title>
+   <meta name="description" content="See how Stack Overflow Developer Survey results change over the years.">
+</svelte:head>
+
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 <p>Double-click anywhere on the plot area to reset the zoom level.</p>
