@@ -151,7 +151,8 @@
 		const config = { // https://plotly.com/javascript/configuration-options/
 			scrollZoom: true,
 			displayModeBar: false,
-			showAxisDragHandles: false // https://stackoverflow.com/a/76736023/9157799
+			showAxisDragHandles: false, // https://stackoverflow.com/a/76736023/9157799
+			responsive: true // https://plotly.com/javascript/responsive-fluid-layout/
 		}
 
 		const dataToAnnotations = data => data.map(data => ({  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
