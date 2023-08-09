@@ -8,6 +8,7 @@
 <div id="cloud_platforms" style="width:800px;height:800px;"></div>
 <div id="other_tools" style="width:800px;height:800px;"></div>
 <div id="ide" style="width:800px;height:800px;"></div>
+<div id="async_tools" style="width:800px;height:800px;"></div>
 
 <script>
 	import { onMount } from 'svelte'
@@ -377,6 +378,44 @@
 			...layout,
 			title: 'Other frameworks and libraries',
 			annotations: dataToAnnotations(other_frameworks_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		}, config) // https://plotly.com/javascript/line-charts/
+
+		const async_tools_data = [
+			{
+				name: 'Jira',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [    49.47,  52.37], // popularity
+				y: [    56.33,  53.10], // love
+				type: 'scatter'
+			}, {
+				name: 'Trello',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [    33.32,  19.36], // popularity
+				y: [    48.57,  46.94], // love
+				type: 'scatter'
+			}, {
+				name: 'Notion',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [    19.82,   17.8], // popularity
+				y: [    66.82,  64.28], // love
+				type: 'scatter'
+			}, {
+				name: 'Confluence',
+				mode: 'lines+markers',
+				text: ['2022', '2023'],
+				x: [     39.8,  34.16], // popularity
+				y: [    51.46,  50.10], // love
+				type: 'scatter'
+			}
+		]
+
+		Plotly.newPlot('async_tools', async_tools_data, {
+			...layout,
+			title: 'Asynchronous tools',
+			annotations: dataToAnnotations(async_tools_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const ide_data = [
