@@ -3,18 +3,18 @@
    <meta name="description" content="See how Stack Overflow Developer Survey results change over the years.">
 </svelte:head>
 
-<div class='lg:max-w-5xl lg:mx-auto'>
+<div class='lg:max-w-5xl lg:mx-auto flex flex-col gap-4 items-center'>
 	<h1>Welcome to SvelteKit</h1>
 	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 	<p>Double-click anywhere on the plot area to reset the zoom level.</p>
-	<div id="programming_languages" class='landscape:h-screen'></div> <!-- https://plotly.com/javascript/getting-started/ -->
-	<!-- <div id="db" class='lg:min-h-screen'></div>
-	<div id="framework" class='lg:min-h-screen'></div>
-	<div id="other_frameworks" class='lg:min-h-screen'></div>
-	<div id="cloud_platforms" class='lg:min-h-screen'></div>
-	<div id="other_tools" class='lg:min-h-screen'></div>
-	<div id="ide" class='lg:min-h-screen'></div>
-	<div id="async_tools" class='lg:min-h-screen'></div> -->
+	<div id="programming_languages" class='landscape:h-[90vh] landscape:w-fit'></div> <!-- https://plotly.com/javascript/getting-started/ -->
+	<div id="db" class='landscape:h-[90vh] landscape:w-fit'></div>
+	<div id="framework" class='landscape:h-[90vh] landscape:w-fit'></div>
+	<div id="other_frameworks" class='landscape:h-[90vh] landscape:w-fit'></div>
+	<div id="cloud_platforms" class='landscape:h-[90vh] landscape:w-fit'></div>
+	<div id="other_tools" class='landscape:h-[90vh] landscape:w-fit'></div>
+	<div id="ide" class='landscape:h-[90vh] landscape:w-fit'></div>
+	<div id="async_tools" class='landscape:h-[90vh] landscape:w-fit'></div>
 </div>
 
 <script>
