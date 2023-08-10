@@ -20,15 +20,15 @@
          </p>
       </div>
    </header>
-	<p>Double-click anywhere on the plot area to reset the zoom level.</p>
-	<div class='aspect-square landscape:h-[90vh]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
-	<div class='aspect-square landscape:h-[90vh]' id="db"></div>
-	<div class='aspect-square landscape:h-[90vh]' id="framework"></div>
-	<div class='aspect-square landscape:h-[90vh]' id="other_frameworks"></div>
-	<div class='aspect-square landscape:h-[90vh]' id="cloud_platforms"></div>
-	<div class='aspect-square landscape:h-[90vh]' id="other_tools"></div>
-	<div class='aspect-square landscape:h-[90vh]' id="ide"></div>
-	<div class='aspect-square landscape:h-[90vh]' id="async_tools"></div>
+	<p class='text-gray-700 p-4'>Double-click anywhere to reset the zoom level.</p>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="framework"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_frameworks"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="cloud_platforms"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_tools"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="ide"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="async_tools"></div>
 </div>
 
 <script>
@@ -184,6 +184,22 @@
 					},
 				},
 			],
+			annotations: [
+				{
+					x: 4,
+					y: 4,
+					xref: 'x',
+					yref: 'y',
+					text: 'Annotation Text 2',
+					showarrow: true,
+					arrowhead: 7,
+					ax: 0,
+					ay: -40,
+					font: {
+						size: 30,
+					},
+				}
+			]
 		}
 
 		const config = { // https://plotly.com/javascript/configuration-options/
