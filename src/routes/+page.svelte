@@ -155,7 +155,22 @@
 				l: 35,
 				r: 35,
 				t: 35
-			}
+			},
+			shapes: [
+				{
+					type: 'rect',
+					xref: 'x',
+					yref: 'y',
+					x0: 0,
+					y0: 0,
+					x1: 100,
+					y1: 100,
+					fillcolor: 'rgba(220, 220, 220, 0.1)', // Transparent color
+					line: {
+						width: 0,
+					},
+				},
+			],
 		}
 
 		const config = { // https://plotly.com/javascript/configuration-options/
