@@ -3,9 +3,23 @@
    <meta name="description" content="See how Stack Overflow Developer Survey results change over the years.">
 </svelte:head>
 
-<div class='lg:max-w-5xl lg:mx-auto flex flex-col gap-4 landscape:items-center'>
-	<h1>Welcome to SvelteKit</h1>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class='lg:max-w-5xl lg:mx-auto flex flex-col gap-10 landscape:items-center'>
+	<header class='p-4 mb-4 flex flex-col gap-3 items-center lg:max-w-5xl lg:mx-auto w-full'>
+      <div class='flex justify-between w-full'> <!-- website name and social media links -->
+         <p class='text-lg font-semibold text-slate-700'>Survey Overflow</p>
+         <div class='flex gap-3 justify-center text-slate-600 decoration-slate-300 text-xs font-medium items-center mt-1'>
+            <a class='underline' target='_blank' href='https://github.com/imambungo/survey-overflow'>GitHub</a>
+         </div>
+      </div>
+      <div class='my-4 flex flex-col items-center gap-3 w-full'> <!-- header 1 and header text -->
+         <h1 class='mt-3 text-2xl font-semibold text-slate-800 text-center w-full'>
+            Stack Overflow Developer Survey trends.
+         </h1>
+         <p class='text-slate-600 text-center w-full leading-snug'>
+				See how the result of the Stack Overflow survey changes over the years.
+         </p>
+      </div>
+   </header>
 	<p>Double-click anywhere on the plot area to reset the zoom level.</p>
 	<div class='aspect-square landscape:h-[90vh]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
 	<div class='aspect-square landscape:h-[90vh]' id="db"></div>
