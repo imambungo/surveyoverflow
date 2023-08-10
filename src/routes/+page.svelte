@@ -149,6 +149,7 @@
 			legend: {
 				orientation: 'h',  // https://plotly.com/javascript/legend/#changing-the-orientation-of-legend | https://plotly.com/javascript/reference/layout/#layout-legend-orientation
 			},
+			showlegend: false,
 			margin: {  // https://plotly.com/javascript/reference/layout/#layout-margin
 				b: 35,
 				l: 35,
