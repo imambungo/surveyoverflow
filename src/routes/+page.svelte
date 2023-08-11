@@ -188,14 +188,15 @@
 				{
 					xref: 'paper', // paper: make it sticky | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
 					yref: 'paper',
-					x: 1, // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
-					y: 1,
+					x: 1, // right side of the plot area | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
+					y: 0, // bottom of the plot area
 					text: 'Double-click anywhere to reset the zoom level',
 					xanchor: 'right', // text on the left | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xanchor
-					yanchor: 'top',
+					yanchor: 'bottom', // text above
 					showarrow: false,
 					font: {
 						size: 12,
+						color: 'rgba(5, 5, 5, 0.5)'
 					},
 				}
 			]
