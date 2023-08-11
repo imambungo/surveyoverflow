@@ -2,6 +2,10 @@
 
 Stack Overflow Developer Survey trends over the years.
 
+## Contributing
+
+The data isn't complete. If there's some data you want to add, add it to `<category>_data.js` in [`src/routes/`](src/routes/).
+
 ## Developing
 
 Once you've pulled the repo and installed dependencies with `npm install`, start the development server:
