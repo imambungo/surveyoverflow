@@ -28,11 +28,9 @@
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_tools"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="ide"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="async_tools"></div>
-	<footer class='text-center p-6 text-xs'>
-      <p class='mt-2 font-light text-slate-500'>
-         <span class='whitespace-nowrap decoration-slate-300'>
-            App <a class='underline' target="_blank" href="https://icons8.com/icon/MUzrfFgK6i0O/line-chart">icon</a> by <a class='underline' target="_blank" href="https://icons8.com">Icons8</a>.
-         </span>
+	<footer class='text-center p-6'>
+      <p class='mt-2 text-xs font-light whitespace-nowrap decoration-slate-300 text-slate-500'>
+			App <a class='underline' target="_blank" href="https://icons8.com/icon/MUzrfFgK6i0O/line-chart">icon</a> by <a class='underline' target="_blank" href="https://icons8.com">Icons8</a>.
       </p>
    </footer>
 </div>
