@@ -4,7 +4,7 @@ Stack Overflow Developer Survey trends over the years.
 
 ## Contributing
 
-The data isn't complete. If there's some data you want to add, add it to `<category>_data.js` in [`src/routes/`](src/routes/).
+The data isn't complete. If there's some data you want to add, add it to `<category>_data.js` in [`src/routes/`](src/routes/). The data is copy-pasted manually from [the survey result pages](https://insights.stackoverflow.com/survey).
 
 ## Developing
 
