@@ -186,17 +186,16 @@
 			],
 			annotations: [
 				{
-					x: 4,
-					y: 4,
-					xref: 'x',
-					yref: 'y',
-					text: 'Annotation Text 2',
-					showarrow: true,
-					arrowhead: 7,
-					ax: 0,
-					ay: -40,
+					xref: 'paper', // paper: make it sticky | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
+					yref: 'paper',
+					x: 1, // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
+					y: 1,
+					text: 'Double-click anywhere to reset the zoom level',
+					xanchor: 'right', // text on the left | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xanchor
+					yanchor: 'top',
+					showarrow: false,
 					font: {
-						size: 30,
+						size: 12,
 					},
 				}
 			]
@@ -225,7 +224,7 @@
 		Plotly.newPlot('programming_languages', pl_data, {
 			...layout,
 			title: 'Programming, scripting, and markup languages',
-			annotations: dataToAnnotations(pl_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(pl_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const db_data = [
