@@ -269,7 +269,7 @@
 		Plotly.newPlot('db', db_data, {
 			...layout,
 			title: 'Databases',
-			annotations: dataToAnnotations(db_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(db_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 
@@ -413,7 +413,7 @@
 		Plotly.newPlot('framework', framework_data, {
 			...layout,
 			title: 'Web frameworks and technologies',
-			annotations: dataToAnnotations(framework_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(framework_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 
@@ -438,7 +438,7 @@
 		Plotly.newPlot('other_frameworks', other_frameworks_data, {
 			...layout,
 			title: 'Other frameworks and libraries',
-			annotations: dataToAnnotations(other_frameworks_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(other_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const async_tools_data = [
@@ -511,7 +511,7 @@
 		Plotly.newPlot('async_tools', async_tools_data, {
 			...layout,
 			title: 'Asynchronous tools',
-			annotations: dataToAnnotations(async_tools_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(async_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const ide_data = [
@@ -605,7 +605,7 @@
 		Plotly.newPlot('ide', ide_data, {
 			...layout,
 			title: 'Integrated development environment',
-			annotations: dataToAnnotations(ide_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(ide_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const other_tools_data = [  // 2022 onwards. Don't use data from 2021 because git is removed since 2022.
@@ -650,7 +650,7 @@
 		Plotly.newPlot('other_tools', other_tools_data, {
 			...layout,
 			title: 'Other tools',
-			annotations: dataToAnnotations(other_tools_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(other_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		const cloud_platforms_data = [ // don't use data from before 2021 since they're not specifically cloud platforms
@@ -758,7 +758,7 @@
 		Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
 			...layout,
 			title: 'Cloud platforms',
-			annotations: dataToAnnotations(cloud_platforms_data)  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(cloud_platforms_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 	})
 
