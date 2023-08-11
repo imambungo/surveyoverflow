@@ -22,9 +22,9 @@
    </header>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="cloud_platforms"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="framework"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_frameworks"></div>
-	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="cloud_platforms"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_tools"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="ide"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="async_tools"></div>
