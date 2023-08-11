@@ -140,6 +140,12 @@
 			annotations: [...layout.annotations , ...dataToAnnotations(db_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
+		Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
+			...layout,
+			title: 'Cloud platforms',
+			annotations: [...layout.annotations , ...dataToAnnotations(cloud_platforms_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		}, config) // https://plotly.com/javascript/line-charts/
+
 		Plotly.newPlot('web_frameworks', web_frameworks_data, {
 			...layout,
 			title: 'Web frameworks and technologies',
@@ -152,10 +158,10 @@
 			annotations: [...layout.annotations , ...dataToAnnotations(other_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('async_tools', async_tools_data, {
+		Plotly.newPlot('other_tools', other_tools_data, {
 			...layout,
-			title: 'Asynchronous tools',
-			annotations: [...layout.annotations , ...dataToAnnotations(async_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			title: 'Other tools',
+			annotations: [...layout.annotations , ...dataToAnnotations(other_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 		Plotly.newPlot('ide', ide_data, {
@@ -163,17 +169,11 @@
 			title: 'Integrated development environment',
 			annotations: [...layout.annotations , ...dataToAnnotations(ide_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
-
-		Plotly.newPlot('other_tools', other_tools_data, {
+		
+		Plotly.newPlot('async_tools', async_tools_data, {
 			...layout,
-			title: 'Other tools',
-			annotations: [...layout.annotations , ...dataToAnnotations(other_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
-
-		Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
-			...layout,
-			title: 'Cloud platforms',
-			annotations: [...layout.annotations , ...dataToAnnotations(cloud_platforms_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			title: 'Asynchronous tools',
+			annotations: [...layout.annotations , ...dataToAnnotations(async_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 	})
 
