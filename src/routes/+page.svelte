@@ -23,7 +23,7 @@
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="cloud_platforms"></div>
-	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="framework"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="web_frameworks"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_frameworks"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_tools"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="ide"></div>
@@ -140,7 +140,7 @@
 			annotations: [...layout.annotations , ...dataToAnnotations(db_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('framework', web_frameworks_data, {
+		Plotly.newPlot('web_frameworks', web_frameworks_data, {
 			...layout,
 			title: 'Web frameworks and technologies',
 			annotations: [...layout.annotations , ...dataToAnnotations(web_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
