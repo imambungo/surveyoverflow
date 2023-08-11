@@ -136,7 +136,7 @@
 		}, config) // https://plotly.com/javascript/line-charts/
 
 
-		const framework_data = [
+		const web_frameworks_data = [
 			{
 				name: 'React',
 				mode: 'lines+markers',
@@ -273,10 +273,10 @@
 			}
 		]
 
-		Plotly.newPlot('framework', framework_data, {
+		Plotly.newPlot('framework', web_frameworks_data, {
 			...layout,
 			title: 'Web frameworks and technologies',
-			annotations: [...layout.annotations , ...dataToAnnotations(framework_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+			annotations: [...layout.annotations , ...dataToAnnotations(web_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
 		}, config) // https://plotly.com/javascript/line-charts/
 
 
