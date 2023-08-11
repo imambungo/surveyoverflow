@@ -20,6 +20,9 @@
          </p>
       </div>
    </header>
+	<p class='p-4 text-sm text-slate-500'>
+		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/survey-overflow#contributing'>here</a>.
+	</p>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="cloud_platforms"></div>
