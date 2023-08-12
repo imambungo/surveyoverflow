@@ -98,6 +98,13 @@ const pl_data = [
       y: [     66.3,   62.1,  63.77,  62.16,  58.56], // love
       type: 'scatter'
    }, {
+      name: 'HTML/CSS', // in 2018, they're splitted
+      mode: 'lines+markers',
+      text: ['2019', '2020', '2021', '2022', '2023'],
+      x: [     63.5,   63.1,  56.07,  55.08,  52.97], // popularity
+      y: [     62.2,   53.5,  60.19,  62.09,  61.90], // love
+      type: 'scatter'
+   }, {
       name: 'Rust',
       mode: 'lines+markers',
       text: ['2019', '2020', '2021', '2022', '2023'],
