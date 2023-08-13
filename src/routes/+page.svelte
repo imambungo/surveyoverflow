@@ -85,6 +85,8 @@
 			);
 		})();
 
+		const zoomPlugin = await import('chartjs-plugin-zoom') // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76728081/9157799
+
 		new Chart(  // https://www.chartjs.org/docs/latest/charts/scatter.html
 			document.getElementById('programming_languages'),
 			{
@@ -98,7 +100,8 @@
 						yAxisKey: 'love',
 					},
 					showLine: true, // https://www.chartjs.org/docs/latest/charts/scatter.html#dataset-properties
-				}
+				},
+				plugins: [zoomPlugin] // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html#bundlers-webpack-rollup-etc | https://www.chartjs.org/docs/latest/developers/plugins.html#using-plugins
 			}
 		)
 
