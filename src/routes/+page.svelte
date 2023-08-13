@@ -96,7 +96,8 @@
 					parsing: {
 						xAxisKey: 'popularity',
 						yAxisKey: 'love',
-					}
+					},
+					showLine: true, // https://www.chartjs.org/docs/latest/charts/scatter.html#dataset-properties
 				}
 			}
 		)
