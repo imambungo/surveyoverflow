@@ -23,6 +23,9 @@
 	<p class='p-4 text-sm text-slate-500'>
 		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/survey-overflow#contributing'>here</a>.
 	</p>
+
+	<div style="width: 800px;"><canvas id="acquisitions"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
+
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="cloud_platforms"></div>
@@ -50,7 +53,37 @@
 	import ide_data from './ide_data.js'
 	import async_tools_data from './async_tools_data.js'
 
+	import Chart from 'chart.js/auto' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
+
 	onMount(async () => {
+		(async function() {  // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
+			const data = [
+				{ year: 2010, count: 10 },
+				{ year: 2011, count: 20 },
+				{ year: 2012, count: 15 },
+				{ year: 2013, count: 25 },
+				{ year: 2014, count: 22 },
+				{ year: 2015, count: 30 },
+				{ year: 2016, count: 28 },
+			];
+
+			new Chart(
+				document.getElementById('acquisitions'),
+				{
+					type: 'bar',
+					data: {
+					labels: data.map(row => row.year),
+					datasets: [
+						{
+							label: 'Acquisitions by year',
+							data: data.map(row => row.count)
+						}
+					]
+					}
+				}
+			);
+		})();
+
 		const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
 
 		const layout = {
