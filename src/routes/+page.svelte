@@ -25,6 +25,7 @@
 	</p>
 
 	<div style="width: 800px;"><canvas id="acquisitions"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
+	<div style="width: 800px;"><canvas id="programming_languages"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
@@ -83,6 +84,16 @@
 				}
 			);
 		})();
+
+		new Chart(  // https://www.chartjs.org/docs/latest/charts/scatter.html
+			document.getElementById('programming_languages'),
+			{
+				type: 'scatter',
+				data: {
+					datasets: pl_data,
+				}
+			}
+		)
 
 		// const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
 
