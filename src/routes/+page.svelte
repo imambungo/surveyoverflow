@@ -91,6 +91,12 @@
 				type: 'scatter',
 				data: {
 					datasets: pl_data,
+				},
+				options: {  // https://www.chartjs.org/docs/latest/general/data-structures.html#object-using-custom-properties
+					parsing: {
+						xAxisKey: 'popularity',
+						yAxisKey: 'love',
+					}
 				}
 			}
 		)
