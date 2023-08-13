@@ -26,14 +26,14 @@
 
 	<div style="width: 800px;"><canvas id="acquisitions"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
 
-	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages" ></div> <!-- https://plotly.com/javascript/getting-started/ -->
+	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="cloud_platforms"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="web_frameworks"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_frameworks"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="other_tools"></div>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="ide"></div>
-	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="async_tools"></div>
+	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="async_tools"></div> -->
 	<footer class='text-center p-6'>
       <p class='mt-2 text-xs font-light whitespace-nowrap decoration-slate-300 text-slate-500'>
 			App <a class='underline' target="_blank" href="https://icons8.com/icon/MUzrfFgK6i0O/line-chart">icon</a> by <a class='underline' target="_blank" href="https://icons8.com">Icons8</a>.
@@ -84,131 +84,131 @@
 			);
 		})();
 
-		const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
+		// const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
 
-		const layout = {
-			dragmode: 'pan', // false, // https://plotly.com/javascript/reference/#layout-dragmode
-			xaxis: {
-				title: 'Popularity',
-				range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
-				//fixedrange: true // prevents zoom | https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
-				scaleanchor: 'y', // https://community.plotly.com/t/autoscale-y-axis-on-double-click-for-data-in-view/74537/3?u=imambungo
-			},
-			yaxis: {
-				title: 'Love',
-				range: [0, 100],
-				//fixedrange: true
-			},
-			legend: {
-				orientation: 'h',  // https://plotly.com/javascript/legend/#changing-the-orientation-of-legend | https://plotly.com/javascript/reference/layout/#layout-legend-orientation
-			},
-			showlegend: false,
-			margin: {  // https://plotly.com/javascript/reference/layout/#layout-margin
-				b: 35,
-				l: 35,
-				r: 35,
-				t: 35
-			},
-			shapes: [
-				{
-					type: 'rect',
-					xref: 'x',
-					yref: 'y',
-					x0: 0,
-					y0: 0,
-					x1: 100,
-					y1: 100,
-					fillcolor: 'rgba(220, 220, 220, 0.1)', // Transparent color
-					line: {
-						width: 0,
-					},
-				},
-			],
-			annotations: [
-				{
-					xref: 'paper', // paper: make it sticky | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
-					yref: 'paper',
-					x: 1, // right side of the plot area | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
-					y: 0, // bottom of the plot area
-					text: 'Double-click anywhere to reset the zoom level',
-					xanchor: 'right', // text on the left | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xanchor
-					yanchor: 'bottom', // text above
-					showarrow: false,
-					font: {
-						size: 12,
-						color: 'rgba(5, 5, 5, 0.5)'
-					},
-				}
-			]
-		}
+		// const layout = {
+		// 	dragmode: 'pan', // false, // https://plotly.com/javascript/reference/#layout-dragmode
+		// 	xaxis: {
+		// 		title: 'Popularity',
+		// 		range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
+		// 		//fixedrange: true // prevents zoom | https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
+		// 		scaleanchor: 'y', // https://community.plotly.com/t/autoscale-y-axis-on-double-click-for-data-in-view/74537/3?u=imambungo
+		// 	},
+		// 	yaxis: {
+		// 		title: 'Love',
+		// 		range: [0, 100],
+		// 		//fixedrange: true
+		// 	},
+		// 	legend: {
+		// 		orientation: 'h',  // https://plotly.com/javascript/legend/#changing-the-orientation-of-legend | https://plotly.com/javascript/reference/layout/#layout-legend-orientation
+		// 	},
+		// 	showlegend: false,
+		// 	margin: {  // https://plotly.com/javascript/reference/layout/#layout-margin
+		// 		b: 35,
+		// 		l: 35,
+		// 		r: 35,
+		// 		t: 35
+		// 	},
+		// 	shapes: [
+		// 		{
+		// 			type: 'rect',
+		// 			xref: 'x',
+		// 			yref: 'y',
+		// 			x0: 0,
+		// 			y0: 0,
+		// 			x1: 100,
+		// 			y1: 100,
+		// 			fillcolor: 'rgba(220, 220, 220, 0.1)', // Transparent color
+		// 			line: {
+		// 				width: 0,
+		// 			},
+		// 		},
+		// 	],
+		// 	annotations: [
+		// 		{
+		// 			xref: 'paper', // paper: make it sticky | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
+		// 			yref: 'paper',
+		// 			x: 1, // right side of the plot area | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
+		// 			y: 0, // bottom of the plot area
+		// 			text: 'Double-click anywhere to reset the zoom level',
+		// 			xanchor: 'right', // text on the left | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xanchor
+		// 			yanchor: 'bottom', // text above
+		// 			showarrow: false,
+		// 			font: {
+		// 				size: 12,
+		// 				color: 'rgba(5, 5, 5, 0.5)'
+		// 			},
+		// 		}
+		// 	]
+		// }
 
-		const config = { // https://plotly.com/javascript/configuration-options/
-			scrollZoom: true,
-			displayModeBar: false,
-			showAxisDragHandles: false, // https://stackoverflow.com/a/76736023/9157799
-			responsive: true // https://plotly.com/javascript/responsive-fluid-layout/
-		}
+		// const config = { // https://plotly.com/javascript/configuration-options/
+		// 	scrollZoom: true,
+		// 	displayModeBar: false,
+		// 	showAxisDragHandles: false, // https://stackoverflow.com/a/76736023/9157799
+		// 	responsive: true // https://plotly.com/javascript/responsive-fluid-layout/
+		// }
 
-		const dataToAnnotations = data => data.map(data => ({  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-			x: data.x.at(-1),  // https://stackoverflow.com/a/3216041/9157799
-			y: data.y.at(-1),
-			xref: 'x',
-			yref: 'y',
-			text: data.name,
-			showarrow: false,
-			font: {
-				size: 12,
-			},
-			yshift: 9  // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-yshift
-		}))
+		// const dataToAnnotations = data => data.map(data => ({  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// 	x: data.x.at(-1),  // https://stackoverflow.com/a/3216041/9157799
+		// 	y: data.y.at(-1),
+		// 	xref: 'x',
+		// 	yref: 'y',
+		// 	text: data.name,
+		// 	showarrow: false,
+		// 	font: {
+		// 		size: 12,
+		// 	},
+		// 	yshift: 9  // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-yshift
+		// }))
 
-		Plotly.newPlot('programming_languages', pl_data, {
-			...layout,
-			title: 'Programming, scripting, and markup languages',
-			annotations: [...layout.annotations , ...dataToAnnotations(pl_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('programming_languages', pl_data, {
+		// 	...layout,
+		// 	title: 'Programming, scripting, and markup languages',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(pl_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('db', db_data, {
-			...layout,
-			title: 'Databases',
-			annotations: [...layout.annotations , ...dataToAnnotations(db_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('db', db_data, {
+		// 	...layout,
+		// 	title: 'Databases',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(db_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
-			...layout,
-			title: 'Cloud platforms',
-			annotations: [...layout.annotations , ...dataToAnnotations(cloud_platforms_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
+		// 	...layout,
+		// 	title: 'Cloud platforms',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(cloud_platforms_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('web_frameworks', web_frameworks_data, {
-			...layout,
-			title: 'Web frameworks and technologies',
-			annotations: [...layout.annotations , ...dataToAnnotations(web_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('web_frameworks', web_frameworks_data, {
+		// 	...layout,
+		// 	title: 'Web frameworks and technologies',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(web_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('other_frameworks', other_frameworks_data, {
-			...layout,
-			title: 'Other frameworks and libraries',
-			annotations: [...layout.annotations , ...dataToAnnotations(other_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('other_frameworks', other_frameworks_data, {
+		// 	...layout,
+		// 	title: 'Other frameworks and libraries',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(other_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('other_tools', other_tools_data, {
-			...layout,
-			title: 'Other tools',
-			annotations: [...layout.annotations , ...dataToAnnotations(other_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('other_tools', other_tools_data, {
+		// 	...layout,
+		// 	title: 'Other tools',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(other_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 
-		Plotly.newPlot('ide', ide_data, {
-			...layout,
-			title: 'Integrated development environment',
-			annotations: [...layout.annotations , ...dataToAnnotations(ide_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('ide', ide_data, {
+		// 	...layout,
+		// 	title: 'Integrated development environment',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(ide_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 		
-		Plotly.newPlot('async_tools', async_tools_data, {
-			...layout,
-			title: 'Asynchronous tools',
-			annotations: [...layout.annotations , ...dataToAnnotations(async_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		}, config) // https://plotly.com/javascript/line-charts/
+		// Plotly.newPlot('async_tools', async_tools_data, {
+		// 	...layout,
+		// 	title: 'Asynchronous tools',
+		// 	annotations: [...layout.annotations , ...dataToAnnotations(async_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+		// }, config) // https://plotly.com/javascript/line-charts/
 	})
 
 </script>
