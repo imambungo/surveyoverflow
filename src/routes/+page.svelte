@@ -56,7 +56,7 @@
 	import Chart from 'chart.js/auto' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
 
 	onMount(async () => {
-		(async function() {  // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
+		(async function() {  // doesn't work outside onMount | https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
 			const data = [
 				{ year: 2010, count: 10 },
 				{ year: 2011, count: 20 },
