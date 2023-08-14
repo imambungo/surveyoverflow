@@ -67,7 +67,7 @@
 			LineElement
 		)
 
-		(async function() {  // doesn't work outside onMount | https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
+		;(async function() {  // semicolon prefix: https://stackoverflow.com/q/31013221/9157799#comment99708284_31013390 | doesn't work outside onMount | https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
 			const data = [
 				{ year: 2010, count: 10 },
 				{ year: 2011, count: 20 },
