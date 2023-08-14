@@ -54,17 +54,18 @@
 	import ide_data from './ide_data.js'
 	import async_tools_data from './async_tools_data.js'
 
-	import { Chart, BarController, ScatterController, LinearScale, PointElement, LineElement } from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
+	import { Chart,
+		BarController, CategoryScale, BarElement,
+		ScatterController, LinearScale, PointElement, LineElement
+	} from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
 
 	onMount(async () => {
 		const zoomPlugin = await import('chartjs-plugin-zoom') // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76728081/9157799
+
 		Chart.register(
-			zoomPlugin, // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
-			BarController, // https://stackoverflow.com/a/67143648/9157799
-			ScatterController,
-			LinearScale,
-			PointElement,
-			LineElement
+			zoomPlugin,                                                // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
+			BarController, CategoryScale, BarElement,                  // https://stackoverflow.com/a/67143648/9157799
+			ScatterController, LinearScale, PointElement, LineElement
 		)
 
 		;(async function() {  // semicolon prefix: https://stackoverflow.com/q/31013221/9157799#comment99708284_31013390 | doesn't work outside onMount | https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
