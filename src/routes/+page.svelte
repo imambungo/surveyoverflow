@@ -26,6 +26,7 @@
 
 	<div style="width: 800px;"><canvas id="acquisitions"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
 	<div style="width: 800px;"><canvas id="programming_languages"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
+	<div style="width: 800px;"><canvas id="coba"></canvas></div>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
@@ -56,7 +57,8 @@
 
 	import { Chart,
 		BarController, CategoryScale, BarElement,
-		ScatterController, LinearScale, PointElement, LineElement
+		ScatterController, LinearScale, PointElement, LineElement,
+		LineController,
 	} from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
 
 	onMount(async () => {
@@ -65,7 +67,8 @@
 		Chart.register(
 			zoomPlugin,                                                // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
 			BarController, CategoryScale, BarElement,                  // https://stackoverflow.com/a/67143648/9157799
-			ScatterController, LinearScale, PointElement, LineElement
+			ScatterController, LinearScale, PointElement, LineElement,
+			LineController,
 		)
 
 		;(async function() {  // semicolon prefix: https://stackoverflow.com/q/31013221/9157799#comment99708284_31013390 | doesn't work outside onMount | https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
@@ -123,6 +126,38 @@
 						}
 					},
 				},
+			}
+		)
+
+		new Chart(
+			document.getElementById('coba'),
+			{
+				type: 'line',
+				data: {
+					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+					datasets: [{
+						label: 'My First Dataset',
+						data: [65, 59, 80, 81, 56, 55, 40],
+						fill: false,
+						borderColor: 'rgb(75, 192, 192)',
+						tension: 0.1
+					}]
+				},
+				options: {
+					plugins: {
+						zoom: {
+							zoom: {
+								wheel: {
+									enabled: true,
+								},
+								pinch: {
+									enabled: true
+								},
+								mode: 'xy',
+							}
+						}
+					}
+				}
 			}
 		)
 
