@@ -54,9 +54,19 @@
 	import ide_data from './ide_data.js'
 	import async_tools_data from './async_tools_data.js'
 
-	import Chart from 'chart.js/auto' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
+	import { Chart, BarController, ScatterController, LinearScale, PointElement, LineElement } from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
 
 	onMount(async () => {
+		const zoomPlugin = await import('chartjs-plugin-zoom') // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76728081/9157799
+		Chart.register(
+			zoomPlugin, // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
+			BarController, // https://stackoverflow.com/a/67143648/9157799
+			ScatterController,
+			LinearScale,
+			PointElement,
+			LineElement
+		)
+
 		(async function() {  // doesn't work outside onMount | https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
 			const data = [
 				{ year: 2010, count: 10 },
@@ -85,8 +95,6 @@
 			);
 		})();
 
-		const zoomPlugin = await import('chartjs-plugin-zoom') // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76728081/9157799
-
 		new Chart(  // https://www.chartjs.org/docs/latest/charts/scatter.html
 			document.getElementById('programming_languages'),
 			{
@@ -100,8 +108,20 @@
 						yAxisKey: 'love',
 					},
 					showLine: true, // https://www.chartjs.org/docs/latest/charts/scatter.html#dataset-properties
+					plugins: { // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/usage.html
+						zoom: {
+							zoom: {
+								wheel: {
+									enabled: true,
+								},
+								pinch: {
+									enabled: true
+								},
+								mode: 'xy',
+							}
+						}
+					},
 				},
-				plugins: [zoomPlugin] // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html#bundlers-webpack-rollup-etc | https://www.chartjs.org/docs/latest/developers/plugins.html#using-plugins
 			}
 		)
 
