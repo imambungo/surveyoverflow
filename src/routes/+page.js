@@ -1,0 +1,1 @@
+export const ssr = false  // https://stackoverflow.com/a/76910295/9157799
