@@ -122,7 +122,10 @@
 									enabled: true
 								},
 								mode: 'xy',
-							}
+							},
+							pan: {
+								enabled: true
+							},
 						}
 					},
 				},
@@ -154,7 +157,10 @@
 									enabled: true
 								},
 								mode: 'xy',
-							}
+							},
+							pan: {
+								enabled: true
+							},
 						}
 					}
 				}
