@@ -8,7 +8,7 @@
       <div class='flex justify-between w-full'> <!-- website name and social media links -->
          <p class='text-lg font-semibold text-slate-700'>Survey Overflow</p>
          <div class='flex gap-3 justify-center text-slate-600 decoration-slate-300 text-xs font-medium items-center mt-1'>
-            <a class='underline' target='_blank' href='https://github.com/imambungo/survey-overflow'>GitHub</a>
+            <a class='underline' target='_blank' href='https://github.com/imambungo/surveyoverflow'>GitHub</a>
          </div>
       </div>
       <div class='my-4 flex flex-col items-center gap-3 w-full'> <!-- header 1 and header text -->
@@ -21,7 +21,7 @@
       </div>
    </header>
 	<p class='p-4 text-sm text-slate-500'>
-		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/survey-overflow#contributing'>here</a>.
+		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/surveyoverflow#contributing'>here</a>.
 	</p>
 
 	<div style="width: 800px;"><canvas id="acquisitions"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
