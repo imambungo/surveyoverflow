@@ -94,6 +94,11 @@
                      }
                   }
 					},
+               onHover: (event, active_elements, chart) => { // https://www.chartjs.org/docs/latest/configuration/interactions.html#events
+                  console.log(event)
+                  console.log(active_elements)
+                  console.log(chart)
+               }
 				},
 			}
 		)
