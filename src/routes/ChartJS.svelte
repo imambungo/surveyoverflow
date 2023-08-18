@@ -55,11 +55,38 @@
 						},
                   annotation: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/usage.html
                      annotations: {
-                        something: {
+                        js2017: {
                            type: 'label',
-                           xValue: 50,
-                           yValue: 60,
-                           content: 'Something', // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+                           content: '2017', // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+                           xValue: 62.5,
+                           yValue: 59.8,
+                           font: {
+                              size: 14 // https://tailwindcss.com/docs/font-size
+                           }
+                        },
+                        js2018: {
+                           type: 'label',
+                           content: '2018', // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+                           xValue: 69.8,
+                           yValue: 61.9,
+                           font: {
+                              size: 14 // https://tailwindcss.com/docs/font-size
+                           }
+                        },
+                        js2019: {
+                           type: 'label',
+                           content: '2019', // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+                           xValue: 67.8,
+                           yValue: 66.8,
+                           font: {
+                              size: 14 // https://tailwindcss.com/docs/font-size
+                           }
+                        },
+                        js2020: {
+                           type: 'label',
+                           content: '2020', // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+                           xValue: 67.7,
+                           yValue: 58.3,
                            font: {
                               size: 14 // https://tailwindcss.com/docs/font-size
                            }
