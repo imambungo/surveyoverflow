@@ -55,14 +55,13 @@
 						},
                   annotation: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/usage.html
                      annotations: {
-                        label1: {
+                        something: {
                            type: 'label',
-                           xValue: 2.5,
+                           xValue: 50,
                            yValue: 60,
-                           backgroundColor: 'rgba(245,245,245)',
-                           content: ['This is my text', 'This is my text, second line'],
+                           content: 'Something', // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
                            font: {
-                              size: 18
+                              size: 14 // https://tailwindcss.com/docs/font-size
                            }
                         }
                      }
