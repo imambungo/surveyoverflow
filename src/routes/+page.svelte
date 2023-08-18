@@ -24,8 +24,7 @@
 		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/surveyoverflow#contributing'>here</a>.
 	</p>
 
-	<div style="width: 800px;"><canvas id="acquisitions"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
-	<div style="width: 800px;"><canvas id="programming_languages"></canvas></div> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
+	<ChartJS datasets={pl_data}></ChartJS>
 	<div style="width: 800px;"><canvas id="coba"></canvas></div>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
@@ -44,7 +43,7 @@
 </div>
 
 <script>
-	import { onMount } from 'svelte'
+	import ChartJS from './ChartJS.svelte'
 
 	import pl_data from './pl_data.js'
 	import db_data from './db_data.js'
@@ -55,243 +54,167 @@
 	import ide_data from './ide_data.js'
 	import async_tools_data from './async_tools_data.js'
 
-	import { Chart,
-		BarController, CategoryScale, BarElement,
-		ScatterController, LinearScale, PointElement, LineElement,
-		LineController,
-	} from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
+	// onMount(async () => {
+	// 	// new Chart(
+	// 	// 	document.getElementById('coba'),
+	// 	// 	{
+	// 	// 		type: 'line',
+	// 	// 		data: {
+	// 	// 			labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+	// 	// 			datasets: [{
+	// 	// 				label: 'My First Dataset',
+	// 	// 				data: [65, 59, 80, 81, 56, 55, 40],
+	// 	// 				fill: false,
+	// 	// 				borderColor: 'rgb(75, 192, 192)',
+	// 	// 				tension: 0.1
+	// 	// 			}]
+	// 	// 		},
+	// 	// 		options: {
+	// 	// 			plugins: {
+	// 	// 				zoom: {
+	// 	// 					zoom: {
+	// 	// 						wheel: {
+	// 	// 							enabled: true,
+	// 	// 						},
+	// 	// 						pinch: {
+	// 	// 							enabled: true
+	// 	// 						},
+	// 	// 						mode: 'xy',
+	// 	// 					},
+	// 	// 					pan: {
+	// 	// 						enabled: true
+	// 	// 					},
+	// 	// 				}
+	// 	// 			}
+	// 	// 		}
+	// 	// 	}
+	// 	// )
 
-	import zoomPlugin from "chartjs-plugin-zoom" // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76910295/9157799
+	// 	// const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
 
-	Chart.register(
-		zoomPlugin,                                                // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
-		BarController, CategoryScale, BarElement,                  // https://stackoverflow.com/a/67143648/9157799
-		ScatterController, LinearScale, PointElement, LineElement,
-		LineController,
-	)
+	// 	// const layout = {
+	// 	// 	dragmode: 'pan', // false, // https://plotly.com/javascript/reference/#layout-dragmode
+	// 	// 	xaxis: {
+	// 	// 		title: 'Popularity',
+	// 	// 		range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
+	// 	// 		//fixedrange: true // prevents zoom | https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
+	// 	// 		scaleanchor: 'y', // https://community.plotly.com/t/autoscale-y-axis-on-double-click-for-data-in-view/74537/3?u=imambungo
+	// 	// 	},
+	// 	// 	yaxis: {
+	// 	// 		title: 'Love',
+	// 	// 		range: [0, 100],
+	// 	// 		//fixedrange: true
+	// 	// 	},
+	// 	// 	legend: {
+	// 	// 		orientation: 'h',  // https://plotly.com/javascript/legend/#changing-the-orientation-of-legend | https://plotly.com/javascript/reference/layout/#layout-legend-orientation
+	// 	// 	},
+	// 	// 	showlegend: false,
+	// 	// 	margin: {  // https://plotly.com/javascript/reference/layout/#layout-margin
+	// 	// 		b: 35,
+	// 	// 		l: 35,
+	// 	// 		r: 35,
+	// 	// 		t: 35
+	// 	// 	},
+	// 	// 	shapes: [
+	// 	// 		{
+	// 	// 			type: 'rect',
+	// 	// 			xref: 'x',
+	// 	// 			yref: 'y',
+	// 	// 			x0: 0,
+	// 	// 			y0: 0,
+	// 	// 			x1: 100,
+	// 	// 			y1: 100,
+	// 	// 			fillcolor: 'rgba(220, 220, 220, 0.1)', // Transparent color
+	// 	// 			line: {
+	// 	// 				width: 0,
+	// 	// 			},
+	// 	// 		},
+	// 	// 	],
+	// 	// 	annotations: [
+	// 	// 		{
+	// 	// 			xref: 'paper', // paper: make it sticky | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
+	// 	// 			yref: 'paper',
+	// 	// 			x: 1, // right side of the plot area | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
+	// 	// 			y: 0, // bottom of the plot area
+	// 	// 			text: 'Double-click anywhere to reset the zoom level',
+	// 	// 			xanchor: 'right', // text on the left | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xanchor
+	// 	// 			yanchor: 'bottom', // text above
+	// 	// 			showarrow: false,
+	// 	// 			font: {
+	// 	// 				size: 12,
+	// 	// 				color: 'rgba(5, 5, 5, 0.5)'
+	// 	// 			},
+	// 	// 		}
+	// 	// 	]
+	// 	// }
 
-	onMount(async () => {
-		;(async function() {  // semicolon prefix: https://stackoverflow.com/q/31013221/9157799#comment99708284_31013390 | doesn't work outside onMount | https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js
-			const data = [
-				{ year: 2010, count: 10 },
-				{ year: 2011, count: 20 },
-				{ year: 2012, count: 15 },
-				{ year: 2013, count: 25 },
-				{ year: 2014, count: 22 },
-				{ year: 2015, count: 30 },
-				{ year: 2016, count: 28 },
-			];
+	// 	// const config = { // https://plotly.com/javascript/configuration-options/
+	// 	// 	scrollZoom: true,
+	// 	// 	displayModeBar: false,
+	// 	// 	showAxisDragHandles: false, // https://stackoverflow.com/a/76736023/9157799
+	// 	// 	responsive: true // https://plotly.com/javascript/responsive-fluid-layout/
+	// 	// }
 
-			new Chart(
-				document.getElementById('acquisitions'),
-				{
-					type: 'bar',
-					data: {
-						labels: data.map(row => row.year),
-						datasets: [
-							{
-								label: 'Acquisitions by year',
-								data: data.map(row => row.count)
-							}
-						]
-					}
-				}
-			);
-		})();
+	// 	// const dataToAnnotations = data => data.map(data => ({  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// 	x: data.x.at(-1),  // https://stackoverflow.com/a/3216041/9157799
+	// 	// 	y: data.y.at(-1),
+	// 	// 	xref: 'x',
+	// 	// 	yref: 'y',
+	// 	// 	text: data.name,
+	// 	// 	showarrow: false,
+	// 	// 	font: {
+	// 	// 		size: 12,
+	// 	// 	},
+	// 	// 	yshift: 9  // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-yshift
+	// 	// }))
 
-		new Chart(  // https://www.chartjs.org/docs/latest/charts/scatter.html
-			document.getElementById('programming_languages'),
-			{
-				type: 'scatter',
-				data: {
-					datasets: pl_data,
-				},
-				options: {  // https://www.chartjs.org/docs/latest/general/data-structures.html#object-using-custom-properties
-					parsing: {
-						xAxisKey: 'popularity',
-						yAxisKey: 'love',
-					},
-					showLine: true, // https://www.chartjs.org/docs/latest/charts/scatter.html#dataset-properties
-					plugins: { // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/usage.html
-						zoom: {
-							zoom: {
-								wheel: {
-									enabled: true,
-								},
-								pinch: {
-									enabled: true
-								},
-								mode: 'xy',
-							},
-							pan: {
-								enabled: true
-							},
-						}
-					},
-				},
-			}
-		)
+	// 	// Plotly.newPlot('programming_languages', pl_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Programming, scripting, and markup languages',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(pl_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
 
-		new Chart(
-			document.getElementById('coba'),
-			{
-				type: 'line',
-				data: {
-					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-					datasets: [{
-						label: 'My First Dataset',
-						data: [65, 59, 80, 81, 56, 55, 40],
-						fill: false,
-						borderColor: 'rgb(75, 192, 192)',
-						tension: 0.1
-					}]
-				},
-				options: {
-					plugins: {
-						zoom: {
-							zoom: {
-								wheel: {
-									enabled: true,
-								},
-								pinch: {
-									enabled: true
-								},
-								mode: 'xy',
-							},
-							pan: {
-								enabled: true
-							},
-						}
-					}
-				}
-			}
-		)
+	// 	// Plotly.newPlot('db', db_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Databases',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(db_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
 
-		// const Plotly = await import('plotly.js-dist-min') // https://www.npmjs.com/package/plotly.js | https://stackoverflow.com/a/76728081/9157799
+	// 	// Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Cloud platforms',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(cloud_platforms_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
 
-		// const layout = {
-		// 	dragmode: 'pan', // false, // https://plotly.com/javascript/reference/#layout-dragmode
-		// 	xaxis: {
-		// 		title: 'Popularity',
-		// 		range: [0, 100], // https://stackoverflow.com/q/76736430/9157799
-		// 		//fixedrange: true // prevents zoom | https://plotly.com/javascript/reference/#layout-xaxis-fixedrange
-		// 		scaleanchor: 'y', // https://community.plotly.com/t/autoscale-y-axis-on-double-click-for-data-in-view/74537/3?u=imambungo
-		// 	},
-		// 	yaxis: {
-		// 		title: 'Love',
-		// 		range: [0, 100],
-		// 		//fixedrange: true
-		// 	},
-		// 	legend: {
-		// 		orientation: 'h',  // https://plotly.com/javascript/legend/#changing-the-orientation-of-legend | https://plotly.com/javascript/reference/layout/#layout-legend-orientation
-		// 	},
-		// 	showlegend: false,
-		// 	margin: {  // https://plotly.com/javascript/reference/layout/#layout-margin
-		// 		b: 35,
-		// 		l: 35,
-		// 		r: 35,
-		// 		t: 35
-		// 	},
-		// 	shapes: [
-		// 		{
-		// 			type: 'rect',
-		// 			xref: 'x',
-		// 			yref: 'y',
-		// 			x0: 0,
-		// 			y0: 0,
-		// 			x1: 100,
-		// 			y1: 100,
-		// 			fillcolor: 'rgba(220, 220, 220, 0.1)', // Transparent color
-		// 			line: {
-		// 				width: 0,
-		// 			},
-		// 		},
-		// 	],
-		// 	annotations: [
-		// 		{
-		// 			xref: 'paper', // paper: make it sticky | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
-		// 			yref: 'paper',
-		// 			x: 1, // right side of the plot area | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xref
-		// 			y: 0, // bottom of the plot area
-		// 			text: 'Double-click anywhere to reset the zoom level',
-		// 			xanchor: 'right', // text on the left | https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-xanchor
-		// 			yanchor: 'bottom', // text above
-		// 			showarrow: false,
-		// 			font: {
-		// 				size: 12,
-		// 				color: 'rgba(5, 5, 5, 0.5)'
-		// 			},
-		// 		}
-		// 	]
-		// }
+	// 	// Plotly.newPlot('web_frameworks', web_frameworks_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Web frameworks and technologies',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(web_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
 
-		// const config = { // https://plotly.com/javascript/configuration-options/
-		// 	scrollZoom: true,
-		// 	displayModeBar: false,
-		// 	showAxisDragHandles: false, // https://stackoverflow.com/a/76736023/9157799
-		// 	responsive: true // https://plotly.com/javascript/responsive-fluid-layout/
-		// }
+	// 	// Plotly.newPlot('other_frameworks', other_frameworks_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Other frameworks and libraries',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(other_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
 
-		// const dataToAnnotations = data => data.map(data => ({  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// 	x: data.x.at(-1),  // https://stackoverflow.com/a/3216041/9157799
-		// 	y: data.y.at(-1),
-		// 	xref: 'x',
-		// 	yref: 'y',
-		// 	text: data.name,
-		// 	showarrow: false,
-		// 	font: {
-		// 		size: 12,
-		// 	},
-		// 	yshift: 9  // https://plotly.com/javascript/reference/layout/annotations/#layout-annotations-items-annotation-yshift
-		// }))
+	// 	// Plotly.newPlot('other_tools', other_tools_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Other tools',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(other_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
 
-		// Plotly.newPlot('programming_languages', pl_data, {
-		// 	...layout,
-		// 	title: 'Programming, scripting, and markup languages',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(pl_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
-
-		// Plotly.newPlot('db', db_data, {
-		// 	...layout,
-		// 	title: 'Databases',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(db_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
-
-		// Plotly.newPlot('cloud_platforms', cloud_platforms_data, {
-		// 	...layout,
-		// 	title: 'Cloud platforms',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(cloud_platforms_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
-
-		// Plotly.newPlot('web_frameworks', web_frameworks_data, {
-		// 	...layout,
-		// 	title: 'Web frameworks and technologies',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(web_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
-
-		// Plotly.newPlot('other_frameworks', other_frameworks_data, {
-		// 	...layout,
-		// 	title: 'Other frameworks and libraries',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(other_frameworks_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
-
-		// Plotly.newPlot('other_tools', other_tools_data, {
-		// 	...layout,
-		// 	title: 'Other tools',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(other_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
-
-		// Plotly.newPlot('ide', ide_data, {
-		// 	...layout,
-		// 	title: 'Integrated development environment',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(ide_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
+	// 	// Plotly.newPlot('ide', ide_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Integrated development environment',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(ide_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
 		
-		// Plotly.newPlot('async_tools', async_tools_data, {
-		// 	...layout,
-		// 	title: 'Asynchronous tools',
-		// 	annotations: [...layout.annotations , ...dataToAnnotations(async_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
-		// }, config) // https://plotly.com/javascript/line-charts/
-	})
+	// 	// Plotly.newPlot('async_tools', async_tools_data, {
+	// 	// 	...layout,
+	// 	// 	title: 'Asynchronous tools',
+	// 	// 	annotations: [...layout.annotations , ...dataToAnnotations(async_tools_data)]  // https://plotly.com/javascript/text-and-annotations/#multiple-annotations
+	// 	// }, config) // https://plotly.com/javascript/line-charts/
+	// })
 
 </script>
