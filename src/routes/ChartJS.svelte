@@ -93,6 +93,11 @@
                      chart.options.plugins.annotation.annotations = {}  // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      chart.update()
                   }
+               },
+               elements: {
+                  point: {
+                     hitRadius: 20, // https://www.chartjs.org/docs/latest/configuration/elements.html#point-configuration
+                  }
                }
 				},
 			}
