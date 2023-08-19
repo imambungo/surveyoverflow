@@ -90,7 +90,7 @@
                            font: {
                               size: 14 // https://tailwindcss.com/docs/font-size
                            }
-                        }
+                        },
                      }
                   }
 					},
