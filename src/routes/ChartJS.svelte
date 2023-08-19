@@ -96,7 +96,12 @@
 					},
                onHover: (event, active_elements, chart) => { // https://www.chartjs.org/docs/latest/configuration/interactions.html#events
                   console.log(event)
-                  console.log(active_elements)
+                  //console.log(active_elements)
+                  if (active_elements.length > 0) {
+                     console.log('AHOY! ' + active_elements.length + ' active elements')
+                     console.log('the first active elements down below')
+                     console.log(active_elements[0].element.$context.dataset.data)
+                  }
                   console.log(chart)
                }
 				},
