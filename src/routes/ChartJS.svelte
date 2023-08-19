@@ -1,6 +1,7 @@
 <div style="width: 800px;"> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
    <canvas bind:this={canvas} id="acquisitions"></canvas> <!-- https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294 -->
 </div>
+<button on:click={() => chart.resetZoom()}>reset zoom</button> <!-- https://stackoverflow.com/a/68294029/9157799 -->
 
 <script>
    import { onMount } from 'svelte' // https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294
@@ -23,9 +24,10 @@
 
    export let datasets
    let canvas
+   let chart
 
    onMount(() => {
-      new Chart(  // https://www.chartjs.org/docs/latest/charts/scatter.html
+      chart = new Chart(  // https://www.chartjs.org/docs/latest/charts/scatter.html | https://stackoverflow.com/a/68294029/9157799
 			canvas,
 			{
 				type: 'scatter',
