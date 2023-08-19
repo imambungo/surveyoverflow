@@ -38,6 +38,24 @@
 						yAxisKey: 'love',
 					},
 					showLine: true, // https://www.chartjs.org/docs/latest/charts/scatter.html#dataset-properties
+               scales: {
+                  x: { // https://www.chartjs.org/docs/latest/axes/#default-scales
+                     min: 0,
+                     max: 100,
+                     title: { // https://www.chartjs.org/docs/latest/axes/labelling.html
+                        display: true, // false by default
+                        text: 'Popularity',
+                     }
+                  },
+                  y: { // https://www.chartjs.org/docs/latest/axes/#default-scales
+                     min: 0,
+                     max: 100,
+                     title: { // https://www.chartjs.org/docs/latest/axes/labelling.html
+                        display: true, // false by default
+                        text: 'Love',
+                     }
+                  }
+               },
 					plugins: { 
 						zoom: { // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/usage.html
 							zoom: {
