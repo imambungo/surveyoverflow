@@ -71,6 +71,10 @@
 							pan: {
 								enabled: true
 							},
+                     limits: { // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/options.html#limits
+                        x: {min: 'original', max: 'original'},
+                        y: {min: 'original', max: 'original'},
+                     }
 						},
                   annotation: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/usage.html
                      annotations: {}
