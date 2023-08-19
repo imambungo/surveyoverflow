@@ -37,6 +37,7 @@
 						xAxisKey: 'popularity',
 						yAxisKey: 'love',
 					},
+               aspectRatio: 1, // https://stackoverflow.com/a/70720880/9157799
 					showLine: true, // https://www.chartjs.org/docs/latest/charts/scatter.html#dataset-properties
                scales: {
                   x: { // https://www.chartjs.org/docs/latest/axes/#default-scales
