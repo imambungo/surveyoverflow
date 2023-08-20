@@ -25,7 +25,7 @@
 	</p>
 
 	<ChartJS datasets={pl_data}></ChartJS>
-	<div style="width: 800px;"><canvas id="coba"></canvas></div>
+	<ChartJS datasets={db_data}></ChartJS>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
