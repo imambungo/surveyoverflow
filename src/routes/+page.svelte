@@ -24,14 +24,14 @@
 		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/surveyoverflow#contributing'>here</a>.
 	</p>
 
-	<ChartJS datasets={pl_data}></ChartJS>
-	<ChartJS datasets={db_data}></ChartJS>
-	<ChartJS datasets={cloud_platforms_data}></ChartJS>
-	<ChartJS datasets={web_frameworks_data}></ChartJS>
-	<ChartJS datasets={other_frameworks_data}></ChartJS>
-	<ChartJS datasets={other_tools_data}></ChartJS>
-	<ChartJS datasets={ide_data}></ChartJS>
-	<ChartJS datasets={async_tools_data}></ChartJS>
+	<ChartJS datasets={pl_data}               title='Programming, scripting, and markup languages'></ChartJS>
+	<ChartJS datasets={db_data}               title='Databases'></ChartJS>
+	<ChartJS datasets={cloud_platforms_data}  title='Cloud platforms'></ChartJS>
+	<ChartJS datasets={web_frameworks_data}   title='Web frameworks and technologies'></ChartJS>
+	<ChartJS datasets={other_frameworks_data} title='Other frameworks and libraries'></ChartJS>
+	<ChartJS datasets={other_tools_data}      title='Other tools'></ChartJS>
+	<ChartJS datasets={ide_data}              title='Integrated development environment'></ChartJS>
+	<ChartJS datasets={async_tools_data}      title='Asynchronous tools'></ChartJS>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>

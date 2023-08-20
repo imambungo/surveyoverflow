@@ -21,6 +21,7 @@
 	)
 
    export let datasets
+   export let title
    let canvas
    let chart
 
@@ -81,7 +82,7 @@
                   },
                   title: { // https://www.chartjs.org/docs/latest/configuration/title.html
                      display: true, // false by default
-                     text: 'aha'
+                     text: title
                   },
 					},
                onHover: (event, active_elements, chart) => { // https://www.chartjs.org/docs/latest/configuration/interactions.html#events
