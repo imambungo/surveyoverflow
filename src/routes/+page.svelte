@@ -31,6 +31,7 @@
 	<ChartJS datasets={other_frameworks_data}></ChartJS>
 	<ChartJS datasets={other_tools_data}></ChartJS>
 	<ChartJS datasets={ide_data}></ChartJS>
+	<ChartJS datasets={async_tools_data}></ChartJS>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>

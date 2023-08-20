@@ -1,67 +1,123 @@
 const async_tools_data = [
    {
-      name: 'Jira',
-      mode: 'lines+markers',
-      text: ['2022', '2023'],
-      x: [    49.47,  52.37], // popularity
-      y: [    56.33,  53.10], // love
-      type: 'scatter'
-   }, {
-      name: 'Trello',
-      mode: 'lines+markers',
-      text: ['2022', '2023'],
-      x: [    33.32,  19.36], // popularity
-      y: [    48.57,  46.94], // love
-      type: 'scatter'
-   }, {
-      name: 'Notion',
-      mode: 'lines+markers',
-      text: ['2022', '2023'],
-      x: [    19.82,   17.8], // popularity
-      y: [    66.82,  64.28], // love
-      type: 'scatter'
-   }, {
-      name: 'Asana',
-      mode: 'lines+markers',
-      text: ['2022', '2023'],
-      x: [     7.91,   5.04], // popularity
-      y: [    37.79,  36.95], // love
-      type: 'scatter'
-   }, {
-      name: 'Airtable',
-      mode: 'lines+markers',
-      text: ['2022', '2023'],
-      x: [     2.94,   2.13], // popularity
-      y: [    43.39,  38.50], // love
-      type: 'scatter'
-   }, {
-      name: 'Linear',
-      mode: 'lines+markers',
-      text: ['2023'],
-      x: [     2.07], // popularity
-      y: [    74.03], // love
-      type: 'scatter'
-   }, {
-      name: 'Markdown File',
-      mode: 'lines+markers',
-      text: ['2023'],
-      x: [    26.17], // popularity
-      y: [    81.83], // love
-      type: 'scatter'
-   }, {
-      name: 'GitHub Discussions',
-      mode: 'lines+markers',
-      text: ['2023'],
-      x: [    16.98], // popularity
-      y: [    70.19], // love
-      type: 'scatter'
-   }, {
-      name: 'Confluence',
-      mode: 'lines+markers',
-      text: ['2022', '2023'],
-      x: [     39.8,  34.16], // popularity
-      y: [    51.46,  50.10], // love
-      type: 'scatter'
+      label: 'Jira',
+      data: [
+         {
+            year: '2022',
+            popularity: 49.47,
+            love: 56.33
+         },
+         {
+            year: '2023',
+            popularity: 52.37,
+            love: 53.10
+         }
+      ]
+   },
+   {
+      label: 'Trello',
+      data: [
+         {
+            year: '2022',
+            popularity: 33.32,
+            love: 48.57
+         },
+         {
+            year: '2023',
+            popularity: 19.36,
+            love: 46.94
+         }
+      ]
+   },
+   {
+      label: 'Notion',
+      data: [
+         {
+            year: '2022',
+            popularity: 19.82,
+            love: 66.82
+         },
+         {
+            year: '2023',
+            popularity: 17.8,
+            love: 64.28
+         }
+      ]
+   },
+   {
+      label: 'Asana',
+      data: [
+         {
+            year: '2022',
+            popularity: 7.91,
+            love: 37.79
+         },
+         {
+            year: '2023',
+            popularity: 5.04,
+            love: 36.95
+         }
+      ]
+   },
+   {
+      label: 'Airtable',
+      data: [
+         {
+            year: '2022',
+            popularity: 2.94,
+            love: 43.39
+         },
+         {
+            year: '2023',
+            popularity: 2.13,
+            love: 38.50
+         }
+      ]
+   },
+   {
+      label: 'Linear',
+      data: [
+         {
+            year: '2023',
+            popularity: 2.07,
+            love: 74.03
+         }
+      ]
+   },
+   {
+      label: 'Markdown File',
+      data: [
+         {
+            year: '2023',
+            popularity: 26.17,
+            love: 81.83
+         }
+      ]
+   },
+   {
+      label: 'GitHub Discussions',
+      data: [
+         {
+            year: '2023',
+            popularity: 16.98,
+            love: 70.19
+         }
+      ]
+   },
+   {
+      label: 'Confluence',
+      data: [
+         {
+            year: '2022',
+            popularity: 39.8,
+            love: 51.46
+         },
+         {
+            year: '2023',
+            popularity: 34.16,
+            love: 50.10
+         }
+      ]
    }
 ]
 
