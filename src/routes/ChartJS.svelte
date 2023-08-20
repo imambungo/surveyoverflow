@@ -143,7 +143,7 @@
                      hitRadius: 20, // https://www.chartjs.org/docs/latest/configuration/elements.html#point-configuration
                   }
                },
-               animations: false, // https://www.chartjs.org/docs/latest/configuration/animations.html#disabling-animation
+               animations: false, // according to the docs, it should be "animation" (without "s") but the one without "s" doesn't work. Whatever. https://www.chartjs.org/docs/latest/configuration/animations.html#disabling-animation
 				},
 			}
 		)
