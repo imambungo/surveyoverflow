@@ -25,6 +25,22 @@
    let canvas
    let chart
 
+   const datasets_to_label_annotations = datasets => {
+      const annotations = {}
+      datasets.forEach(item => {
+         annotations[item.label] = { // https://stackoverflow.com/a/8317995/9157799
+            type: 'label',
+            content: item.label, // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+            xValue: item.data.at(-1).popularity, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
+            yValue: item.data.at(-1).love, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
+            font: {
+               size: 14 // https://tailwindcss.com/docs/font-size
+            },
+         }
+      })
+      return annotations
+   }
+
    onMount(() => {
       chart = new Chart(  // https://www.chartjs.org/docs/latest/charts/scatter.html | https://stackoverflow.com/a/68294029/9157799
 			canvas,
@@ -95,7 +111,7 @@
                      console.log(data)
 
                      const highlight_data_year_of_the_same_dataset = (chart, data) => {
-                        const data_to_annotations = (data) => { // because the plugin interaction doesn't support dataset mode:  https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/options.html#interaction
+                        const data_to_year_annotations = (data) => { // because the plugin interaction doesn't support dataset mode:  https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/options.html#interaction
                            const annotations = {}
                            data.forEach(element => {
                               annotations[element.year] = { // https://stackoverflow.com/a/2241883/9157799
@@ -111,7 +127,7 @@
                            return annotations
                         }
 
-                        chart.options.plugins.annotation.annotations = data_to_annotations(data) // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+                        chart.options.plugins.annotation.annotations = data_to_year_annotations(data) // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                         chart.update()                                                           // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      }
                      highlight_data_year_of_the_same_dataset(chart, data)
