@@ -1,88 +1,238 @@
 const ide_data = [
    {
-      name: 'Visual Studio Code',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    71.06,  74.48,  73.71], // popularity
-      y: [    79.30,  81.00,  76.98], // love
-      type: 'scatter'
-   }, {
-      name: 'Neovim',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [     4.99,   6.75,  11.88], // popularity
-      y: [    82.36,  82.92,  81.43], // love
-      type: 'scatter'
-   }, {
-      name: 'Visual Studio',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    33.03,  32.15,  28.43], // popularity
-      y: [    60.00,  60.76,  59.98], // love
-      type: 'scatter'
-   }, {
-      name: 'IntelliJ IDEA',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    28.74,  27.97,  26.82], // popularity
-      y: [    67.65,  68.08,  66.39], // love
-      type: 'scatter'
-   }, {
-      name: 'Android Studio',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    22.22,   19.8,  16.82], // popularity
-      y: [    50.28,  49.41,  46.72], // love
-      type: 'scatter'
-   }, {
-      name: 'Notepad++',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    29.71,  27.71,  24.54], // popularity
-      y: [    56.24,  58.85,  60.28], // love
-      type: 'scatter'
-   }, {
-      name: 'Sublime Text',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    20.47,  16.51,  12.61], // popularity
-      y: [    51.39,  50.74,  52.04], // love
-      type: 'scatter'
-   }, {
-      name: 'Emacs',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [      5.3,   4.51,   4.69], // popularity
-      y: [    68.85,  70.39,  64.61], // love
-      type: 'scatter'
-   }, {
-      name: 'Xcode',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    11.07,  10.53,   9.45], // popularity
-      y: [    52.38,  50.22,  49.12], // love
-      type: 'scatter'
-   }, {
-      name: 'Atom',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    12.94,   9.35,   5.63], // popularity
-      y: [    33.07,  30.80,  19.12], // love
-      type: 'scatter'
-   }, {
-      name: 'Nano',
-      mode: 'lines+markers',
-      text: ['2022', '2023'],
-      x: [     9.26,   8.98], // popularity
-      y: [    57.49,  57.25], // love
-      type: 'scatter'
-   }, {
-      name: 'Vim',
-      mode: 'lines+markers',
-      text: ['2021', '2022', '2023'],
-      x: [    24.19,  23.34,  22.29], // popularity
-      y: [    69.70,  69.69,  66.74], // love
-      type: 'scatter'
+      label: 'Visual Studio Code',
+      data: [
+         {
+            year: '2021',
+            popularity: 71.06,
+            love: 79.30
+         },
+         {
+            year: '2022',
+            popularity: 74.48,
+            love: 81.00
+         },
+         {
+            year: '2023',
+            popularity: 73.71,
+            love: 76.98
+         }
+      ]
+   },
+   {
+      label: 'Neovim',
+      data: [
+         {
+            year: '2021',
+            popularity: 4.99,
+            love: 82.36
+         },
+         {
+            year: '2022',
+            popularity: 6.75,
+            love: 82.92
+         },
+         {
+            year: '2023',
+            popularity: 11.88,
+            love: 81.43
+         }
+      ]
+   },
+   {
+      label: 'Visual Studio',
+      data: [
+         {
+            year: '2021',
+            popularity: 33.03,
+            love: 60.00
+         },
+         {
+            year: '2022',
+            popularity: 32.15,
+            love: 60.76
+         },
+         {
+            year: '2023',
+            popularity: 28.43,
+            love: 59.98
+         }
+      ]
+   },
+   {
+      label: 'IntelliJ IDEA',
+      data: [
+         {
+            year: '2021',
+            popularity: 28.74,
+            love: 67.65
+         },
+         {
+            year: '2022',
+            popularity: 27.97,
+            love: 68.08
+         },
+         {
+            year: '2023',
+            popularity: 26.82,
+            love: 66.39
+         }
+      ]
+   },
+   {
+      label: 'Android Studio',
+      data: [
+         {
+            year: '2021',
+            popularity: 22.22,
+            love: 50.28
+         },
+         {
+            year: '2022',
+            popularity: 19.8,
+            love: 49.41
+         },
+         {
+            year: '2023',
+            popularity: 16.82,
+            love: 46.72
+         }
+      ]
+   },
+   {
+      label: 'Notepad++',
+      data: [
+         {
+            year: '2021',
+            popularity: 29.71,
+            love: 56.24
+         },
+         {
+            year: '2022',
+            popularity: 27.71,
+            love: 58.85
+         },
+         {
+            year: '2023',
+            popularity: 24.54,
+            love: 60.28
+         }
+      ]
+   },
+   {
+      label: 'Sublime Text',
+      data: [
+         {
+            year: '2021',
+            popularity: 20.47,
+            love: 51.39
+         },
+         {
+            year: '2022',
+            popularity: 16.51,
+            love: 50.74
+         },
+         {
+            year: '2023',
+            popularity: 12.61,
+            love: 52.04
+         }
+      ]
+   },
+   {
+      label: 'Emacs',
+      data: [
+         {
+            year: '2021',
+            popularity: 5.3,
+            love: 68.85
+         },
+         {
+            year: '2022',
+            popularity: 4.51,
+            love: 70.39
+         },
+         {
+            year: '2023',
+            popularity: 4.69,
+            love: 64.61
+         }
+      ]
+   },
+   {
+      label: 'Xcode',
+      data: [
+         {
+            year: '2021',
+            popularity: 11.07,
+            love: 52.38
+         },
+         {
+            year: '2022',
+            popularity: 10.53,
+            love: 50.22
+         },
+         {
+            year: '2023',
+            popularity: 9.45,
+            love: 49.12
+         }
+      ]
+   },
+   {
+      label: 'Atom',
+      data: [
+         {
+            year: '2021',
+            popularity: 12.94,
+            love: 33.07
+         },
+         {
+            year: '2022',
+            popularity: 9.35,
+            love: 30.80
+         },
+         {
+            year: '2023',
+            popularity: 5.63,
+            love: 19.12
+         }
+      ]
+   },
+   {
+      label: 'Nano',
+      data: [
+         {
+            year: '2022',
+            popularity: 9.26,
+            love: 57.49
+         },
+         {
+            year: '2023',
+            popularity: 8.98,
+            love: 57.25
+         }
+      ]
+   },
+   {
+      label: 'Vim',
+      data: [
+         {
+            year: '2021',
+            popularity: 24.19,
+            love: 69.70
+         },
+         {
+            year: '2022',
+            popularity: 23.34,
+            love: 69.69
+         },
+         {
+            year: '2023',
+            popularity: 22.29,
+            love: 66.74
+         }
+      ]
    }
 ]
 
