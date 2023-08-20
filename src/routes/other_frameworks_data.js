@@ -1,18 +1,63 @@
 const other_frameworks_data = [
    {
-      name: 'React Native',
-      mode: 'lines+markers',
-      text: ['2019', '2020', '2021', '2022', '2023'],
-      x: [     10.5,   11.5,  14.51,  12.57,   8.43], // popularity
-      y: [     62.5,   57.9,  58.08,  55.98,   54.0], // love
-      type: 'scatter'
-   }, {
-      name: 'Flutter',
-      mode: 'lines+markers',
-      text: ['2019', '2020', '2021', '2022', '2023'],
-      x: [      3.4,    7.2,  13.55,  12.64,   9.12], // popularity
-      y: [     75.4,   68.8,  68.17,  68.03,  64.43], // love
-      type: 'scatter'
+      label: 'React Native',
+      data: [
+         {
+            year: '2019',
+            popularity: 10.5,
+            love: 62.5
+         },
+         {
+            year: '2020',
+            popularity: 11.5,
+            love: 57.9
+         },
+         {
+            year: '2021',
+            popularity: 14.51,
+            love: 58.08
+         },
+         {
+            year: '2022',
+            popularity: 12.57,
+            love: 55.98
+         },
+         {
+            year: '2023',
+            popularity: 8.43,
+            love: 54.0
+         }
+      ]
+   },
+   {
+      label: 'Flutter',
+      data: [
+         {
+            year: '2019',
+            popularity: 3.4,
+            love: 75.4
+         },
+         {
+            year: '2020',
+            popularity: 7.2,
+            love: 68.8
+         },
+         {
+            year: '2021',
+            popularity: 13.55,
+            love: 68.17
+         },
+         {
+            year: '2022',
+            popularity: 12.64,
+            love: 68.03
+         },
+         {
+            year: '2023',
+            popularity: 9.12,
+            love: 64.43
+         }
+      ]
    }
 ]
 
