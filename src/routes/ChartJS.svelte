@@ -1,4 +1,4 @@
-<div style="width: 800px;"> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
+<div class='aspect-square landscape:h-[90vh] max-w-5xl'> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
    <canvas bind:this={canvas} id="acquisitions"></canvas> <!-- https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294 -->
 </div>
 <button on:click={() => chart.resetZoom()}>reset zoom</button> <!-- https://stackoverflow.com/a/68294029/9157799 -->
