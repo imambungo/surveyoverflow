@@ -7,9 +7,7 @@
    import { onMount } from 'svelte' // https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294
 
    import { Chart,
-		BarController, CategoryScale, BarElement,
 		ScatterController, LinearScale, PointElement, LineElement,
-		LineController,
 	} from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
 	import zoomPlugin from "chartjs-plugin-zoom" // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76910295/9157799
    import annotationPlugin from 'chartjs-plugin-annotation' // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/
@@ -17,9 +15,7 @@
    Chart.register(
 		zoomPlugin,                                                // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
       annotationPlugin,                                          // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/integration.html
-		BarController, CategoryScale, BarElement,                  // https://stackoverflow.com/a/67143648/9157799
-		ScatterController, LinearScale, PointElement, LineElement,
-		LineController,
+		ScatterController, LinearScale, PointElement, LineElement, // https://stackoverflow.com/a/67143648/9157799
 	)
 
    export let datasets
@@ -80,7 +76,11 @@
 						},
                   annotation: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/usage.html
                      annotations: {}
-                  }
+                  },
+                  title: { // https://www.chartjs.org/docs/latest/configuration/title.html
+                     display: true, // false by default
+                     text: 'aha'
+                  },
 					},
                onHover: (event, active_elements, chart) => { // https://www.chartjs.org/docs/latest/configuration/interactions.html#events
                   console.log(event)
