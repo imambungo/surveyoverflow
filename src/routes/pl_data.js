@@ -1,219 +1,594 @@
-// const pl_data = [
-//    {
-//       name: 'JavaScript',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     62.5,   69.8,   67.8,   67.7,  64.96,  65.36,  63.61], // popularity
-//       y: [     59.8,   61.9,   66.8,   58.3,  61.51,  61.46,  57.83], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'SQL',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     51.2,     57,   54.4,   54.7,   47.8,  49.43,  48.66], // popularity
-//       y: [     53.4,   57.5,  64.1,    56.6,  61.83,  64.25,  64.26], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Java',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     39.7,   45.3,   41.1,   40.2,  35.35,  33.27,  30.55], // popularity
-//       y: [     50.5,   50.7,   53.4,   44.1,  47.15,  45.75,  44.11], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'C#',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     34.1,   34.4,   31.0,   31.4,  27.86,  27.98,  27.62], // popularity
-//       y: [     61.7,   60.4,   67.0,   59.7,  61.96,  63.39,  62.87], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Python',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     32.0,   38.8,   41.7,   44.1,  48.24,  48.07,  49.28], // popularity
-//       y: [     62.7,   60.8,   73.1,   66.7,  67.83,  67.34,  65.52], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'PHP',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     28.1,   30.7,   26.4,   26.2,  21.98,  20.87,  18.58], // popularity
-//       y: [     41.4,   41.6,   45.8,   37.3,  40.24,  41.61,  41.83], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'TypeScript',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [      9.5,   17.4,   21.2,   25.4,  30.19,  34.83,  38.87], // popularity
-//       y: [     64.1,   67.0,   73.1,   67.1,  72.73,  73.46,  71.70], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Ruby',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [      9.1,   10.1,    8.4,    7.1,   6.75,   6.05,   6.23], // popularity
-//       y: [     48.5,   47.4,   50.3,   42.9,  53.24,  49.99,  47.69], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Go',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [      4.3,    7.1,    8.2,    8.8,   9.55,  11.15,  13.24], // popularity
-//       y: [     63.3,   65.6,   67.9,   62.3,  62.74,  64.58,  62.45], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Swift',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [      6.5,    8.1,    6.6,    5.9,    5.1,   4.91,   4.65], // popularity
-//       y: [     63.9,   65.1,   69.2,   59.5,  63.56,  62.88,  61.42], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'C',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     19.0,   23.0,   20.6,   21.8,  21.01,  19.27,  19.34], // popularity
-//       y: [     41.7,   37.4,   42.5,   33.1,  39.56,  39.68,  43.29], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'C++',
-//       mode: 'lines+markers',
-//       text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [     22.3,   25.4,   23.5,   23.9,  24.31,  22.55,  22.42], // popularity
-//       y: [     52.0,   46.7,   52.0,   43.4,  49.24,  48.39,  49.77], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Kotlin',
-//       mode: 'lines+markers',
-//       text: ['2018', '2019', '2020', '2021', '2022', '2023'],
-//       x: [      4.5,    6.4,    7.8,   8.32,   9.16,   9.06], // popularity
-//       y: [     75.1,   72.6,   62.9,  61.55,  63.29,  60.77], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Dart',
-//       mode: 'lines+markers',
-//       text: ['2019', '2020', '2021', '2022', '2023'],
-//       x: [      1.9,    4.0,   6.02,   6.54,   6.02], // popularity
-//       y: [     66.3,   62.1,  63.77,  62.16,  58.56], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'HTML/CSS', // in 2018, they're splitted
-//       mode: 'lines+markers',
-//       text: ['2019', '2020', '2021', '2022', '2023'],
-//       x: [     63.5,   63.1,  56.07,  55.08,  52.97], // popularity
-//       y: [     62.2,   53.5,  60.19,  62.09,  61.90], // love
-//       type: 'scatter'
-//    }, {
-//       name: 'Rust',
-//       mode: 'lines+markers',
-//       text: ['2019', '2020', '2021', '2022', '2023'],
-//       x: [      3.2,    5.1,   7.03,   9.32,  13.05], // popularity
-//       y: [     83.5,   86.1,  86.98,  86.73,  84.66], // love
-//       type: 'scatter'
-//    }
-// ]
-
 const pl_data = [
    {
       label: 'JavaScript',
-      // text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-      // x: [     62.5,   69.8,   67.8,   67.7,  64.96,  65.36,  63.61], // popularity
-      // y: [     59.8,   61.9,   66.8,   58.3,  61.51,  61.46,  57.83], // love
-      data: [{  // https://www.chartjs.org/docs/latest/general/data-structures.html#object-using-custom-properties
-         year:     '2017',
-         popularity: 62.5,
-         love:       59.8,
-      }, {
-         year:     '2018',
-         popularity: 69.8,
-         love:       61.9,
-      }, {
-         year:     '2019',
-         popularity: 67.8,
-         love:       66.8,
-      }, {
-         year:     '2020',
-         popularity: 67.7,
-         love:       58.3,
-      }]
+      data: [ // https://www.chartjs.org/docs/latest/general/data-structures.html#object-using-custom-properties
+         {
+            year: '2017',
+            popularity: 62.5,
+            love: 59.8,
+         },
+         {
+            year: '2018',
+            popularity: 69.8,
+            love: 61.9,
+         },
+         {
+            year: '2019',
+            popularity: 67.8,
+            love: 66.8,
+         },
+         {
+            year: '2020',
+            popularity: 67.7,
+            love: 58.3,
+         },
+         {
+            year: '2021',
+            popularity: 64.96,
+            love: 61.51,
+         },
+         {
+            year: '2022',
+            popularity: 65.36,
+            love: 61.46,
+         },
+         {
+            year: '2023',
+            popularity: 63.61,
+            love: 57.83,
+         },
+      ],
+   }, {
+      label: 'SQL',
+      data: [
+         {
+            year: '2017',
+            popularity: 51.2,
+            love: 53.4
+         },
+         {
+            year: '2018',
+            popularity: 57,
+            love: 57.5
+         },
+         {
+            year: '2019',
+            popularity: 54.4,
+            love: 64.1
+         },
+         {
+            year: '2020',
+            popularity: 54.7,
+            love: 56.6
+         },
+         {
+            year: '2021',
+            popularity: 47.8,
+            love: 61.83
+         },
+         {
+            year: '2022',
+            popularity: 49.43,
+            love: 64.25
+         },
+         {
+            year: '2023',
+            popularity: 48.66,
+            love: 64.26
+         }
+      ],
+   }, {
+      label: 'Java',
+      data: [
+         {
+            year: '2017',
+            popularity: 39.7,
+            love: 50.5
+         },
+         {
+            year: '2018',
+            popularity: 45.3,
+            love: 50.7
+         },
+         {
+            year: '2019',
+            popularity: 41.1,
+            love: 53.4
+         },
+         {
+            year: '2020',
+            popularity: 40.2,
+            love: 44.1
+         },
+         {
+            year: '2021',
+            popularity: 35.35,
+            love: 47.15
+         },
+         {
+            year: '2022',
+            popularity: 33.27,
+            love: 45.75
+         },
+         {
+            year: '2023',
+            popularity: 30.55,
+            love: 44.11
+         }
+      ],
+   }, {
+      label: 'C#',
+      data: [
+         {
+            year: '2017',
+            popularity: 34.1,
+            love: 61.7
+         },
+         {
+            year: '2018',
+            popularity: 34.4,
+            love: 60.4
+         },
+         {
+            year: '2019',
+            popularity: 31,
+            love: 67
+         },
+         {
+            year: '2020',
+            popularity: 31.4,
+            love: 59.7
+         },
+         {
+            year: '2021',
+            popularity: 27.86,
+            love: 61.96
+         },
+         {
+            year: '2022',
+            popularity: 27.98,
+            love: 63.39
+         },
+         {
+            year: '2023',
+            popularity: 27.62,
+            love: 62.87
+         }
+      ],
+   }, {
+      label: 'Python',
+      data: [
+         {
+            year: '2017',
+            popularity: 32,
+            love: 62.7
+         },
+         {
+            year: '2018',
+            popularity: 38.8,
+            love: 60.8
+         },
+         {
+            year: '2019',
+            popularity: 41.7,
+            love: 73.1
+         },
+         {
+            year: '2020',
+            popularity: 44.1,
+            love: 66.7
+         },
+         {
+            year: '2021',
+            popularity: 48.24,
+            love: 67.83
+         },
+         {
+            year: '2022',
+            popularity: 48.07,
+            love: 67.34
+         },
+         {
+            year: '2023',
+            popularity: 49.28,
+            love: 65.52
+         }
+      ],
+   }, {
+      label: 'PHP',
+      data: [
+         {
+            year: '2017',
+            popularity: 28.1,
+            love: 41.4
+         },
+         {
+            year: '2018',
+            popularity: 30.7,
+            love: 41.6
+         },
+         {
+            year: '2019',
+            popularity: 26.4,
+            love: 45.8
+         },
+         {
+            year: '2020',
+            popularity: 26.2,
+            love: 37.3
+         },
+         {
+            year: '2021',
+            popularity: 21.98,
+            love: 40.24
+         },
+         {
+            year: '2022',
+            popularity: 20.87,
+            love: 41.61
+         },
+         {
+            year: '2023',
+            popularity: 18.58,
+            love: 41.83
+         }
+      ],
+   }, {
+      label: 'TypeScript',
+      data: [
+         {
+            year: '2017',
+            popularity: 9.5,
+            love: 64.1
+         },
+         {
+            year: '2018',
+            popularity: 17.4,
+            love: 67
+         },
+         {
+            year: '2019',
+            popularity: 21.2,
+            love: 73.1
+         },
+         {
+            year: '2020',
+            popularity: 25.4,
+            love: 67.1
+         },
+         {
+            year: '2021',
+            popularity: 30.19,
+            love: 72.73
+         },
+         {
+            year: '2022',
+            popularity: 34.83,
+            love: 73.46
+         },
+         {
+            year: '2023',
+            popularity: 38.87,
+            love: 71.7
+         }
+      ],
+   }, {
+      label: 'Ruby',
+      data: [
+         {
+            year: '2017',
+            popularity: 9.1,
+            love: 48.5
+         },
+         {
+            year: '2018',
+            popularity: 10.1,
+            love: 47.4
+         },
+         {
+            year: '2019',
+            popularity: 8.4,
+            love: 50.3
+         },
+         {
+            year: '2020',
+            popularity: 7.1,
+            love: 42.9
+         },
+         {
+            year: '2021',
+            popularity: 6.75,
+            love: 53.24
+         },
+         {
+            year: '2022',
+            popularity: 6.05,
+            love: 49.99
+         },
+         {
+            year: '2023',
+            popularity: 6.23,
+            love: 47.69
+         }
+      ],
+   }, {
+      label: 'Go',
+      data: [
+         {
+            year: '2017',
+            popularity: 4.3,
+            love: 63.3
+         },
+         {
+            year: '2018',
+            popularity: 7.1,
+            love: 65.6
+         },
+         {
+            year: '2019',
+            popularity: 8.2,
+            love: 67.9
+         },
+         {
+            year: '2020',
+            popularity: 8.8,
+            love: 62.3
+         },
+         {
+            year: '2021',
+            popularity: 9.55,
+            love: 62.74
+         },
+         {
+            year: '2022',
+            popularity: 11.15,
+            love: 64.58
+         },
+         {
+            year: '2023',
+            popularity: 13.24,
+            love: 62.45
+         }
+      ],
+   }, {
+      label: 'Swift',
+      data: [
+         {
+            year: '2017',
+            popularity: 6.5,
+            love: 63.9
+         },
+         {
+            year: '2018',
+            popularity: 8.1,
+            love: 65.1
+         },
+         {
+            year: '2019',
+            popularity: 6.6,
+            love: 69.2
+         },
+         {
+            year: '2020',
+            popularity: 5.9,
+            love: 59.5
+         },
+         {
+            year: '2021',
+            popularity: 5.1,
+            love: 63.56
+         },
+         {
+            year: '2022',
+            popularity: 4.91,
+            love: 62.88
+         },
+         {
+            year: '2023',
+            popularity: 4.65,
+            love: 61.42
+         }
+      ],
+   }, {
+      label: 'C',
+      data: [
+         {
+            year: '2017',
+            popularity: 19,
+            love: 41.7
+         },
+         {
+            year: '2018',
+            popularity: 23,
+            love: 37.4
+         },
+         {
+            year: '2019',
+            popularity: 20.6,
+            love: 42.5
+         },
+         {
+            year: '2020',
+            popularity: 21.8,
+            love: 33.1
+         },
+         {
+            year: '2021',
+            popularity: 21.01,
+            love: 39.56
+         },
+         {
+            year: '2022',
+            popularity: 19.27,
+            love: 39.68
+         },
+         {
+            year: '2023',
+            popularity: 19.34,
+            love: 43.29
+         }
+      ],
+   }, {
+      label: 'C++',
+      data: [
+         {
+            year: '2017',
+            popularity: 22.3,
+            love: 52
+         },
+         {
+            year: '2018',
+            popularity: 25.4,
+            love: 46.7
+         },
+         {
+            year: '2019',
+            popularity: 23.5,
+            love: 52
+         },
+         {
+            year: '2020',
+            popularity: 23.9,
+            love: 43.4
+         },
+         {
+            year: '2021',
+            popularity: 24.31,
+            love: 49.24
+         },
+         {
+            year: '2022',
+            popularity: 22.55,
+            love: 48.39
+         },
+         {
+            year: '2023',
+            popularity: 22.42,
+            love: 49.77
+         }
+      ],
+   }, {
+      label: 'Kotlin',
+      data: [
+         {
+            year: '2018',
+            popularity: 4.5,
+            love: 75.1
+         },
+         {
+            year: '2019',
+            popularity: 6.4,
+            love: 72.6
+         },
+         {
+            year: '2020',
+            popularity: 7.8,
+            love: 62.9
+         },
+         {
+            year: '2021',
+            popularity: 8.32,
+            love: 61.55
+         },
+         {
+            year: '2022',
+            popularity: 9.16,
+            love: 63.29
+         },
+         {
+            year: '2023',
+            popularity: 9.06,
+            love: 60.77
+         }
+      ],
+   }, {
+      label: 'Dart',
+      data: [
+         {
+            year: '2019',
+            popularity: 1.9,
+            love: 66.3
+         },
+         {
+            year: '2020',
+            popularity: 4,
+            love: 62.1
+         },
+         {
+            year: '2021',
+            popularity: 6.02,
+            love: 63.77
+         },
+         {
+            year: '2022',
+            popularity: 6.54,
+            love: 62.16
+         },
+         {
+            year: '2023',
+            popularity: 6.02,
+            love: 58.56
+         }
+      ],
+   }, {
+      label: 'HTML/CSS',
+      data: [
+         {
+            year: '2019',
+            popularity: 63.5,
+            love: 62.2
+         },
+         {
+            year: '2020',
+            popularity: 63.1,
+            love: 53.5
+         },
+         {
+            year: '2021',
+            popularity: 56.07,
+            love: 60.19
+         },
+         {
+            year: '2022',
+            popularity: 55.08,
+            love: 62.09
+         },
+         {
+            year: '2023',
+            popularity: 52.97,
+            love: 61.9
+         }
+      ],
+   }, {
+      label: 'Rust',
+      data: [
+         {
+            year: '2019',
+            popularity: 3.2,
+            love: 83.5
+         },
+         {
+            year: '2020',
+            popularity: 5.1,
+            love: 86.1
+         },
+         {
+            year: '2021',
+            popularity: 7.03,
+            love: 86.98
+         },
+         {
+            year: '2022',
+            popularity: 9.32,
+            love: 86.73
+         },
+         {
+            year: '2023',
+            popularity: 13.05,
+            love: 84.66
+         }
+      ],
    }
-   // }, {
-   //    label: 'SQL',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [     51.2,     57,   54.4,   54.7,   47.8,  49.43,  48.66], // popularity
-   //    y: [     53.4,   57.5,  64.1,    56.6,  61.83,  64.25,  64.26], // love
-   // }, {
-   //    label: 'Java',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [     39.7,   45.3,   41.1,   40.2,  35.35,  33.27,  30.55], // popularity
-   //    y: [     50.5,   50.7,   53.4,   44.1,  47.15,  45.75,  44.11], // love
-   // }, {
-   //    label: 'C#',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [     34.1,   34.4,   31.0,   31.4,  27.86,  27.98,  27.62], // popularity
-   //    y: [     61.7,   60.4,   67.0,   59.7,  61.96,  63.39,  62.87], // love
-   // }, {
-   //    label: 'Python',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [     32.0,   38.8,   41.7,   44.1,  48.24,  48.07,  49.28], // popularity
-   //    y: [     62.7,   60.8,   73.1,   66.7,  67.83,  67.34,  65.52], // love
-   // }, {
-   //    label: 'PHP',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [     28.1,   30.7,   26.4,   26.2,  21.98,  20.87,  18.58], // popularity
-   //    y: [     41.4,   41.6,   45.8,   37.3,  40.24,  41.61,  41.83], // love
-   // }, {
-   //    label: 'TypeScript',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [      9.5,   17.4,   21.2,   25.4,  30.19,  34.83,  38.87], // popularity
-   //    y: [     64.1,   67.0,   73.1,   67.1,  72.73,  73.46,  71.70], // love
-   // }, {
-   //    label: 'Ruby',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [      9.1,   10.1,    8.4,    7.1,   6.75,   6.05,   6.23], // popularity
-   //    y: [     48.5,   47.4,   50.3,   42.9,  53.24,  49.99,  47.69], // love
-   // }, {
-   //    label: 'Go',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [      4.3,    7.1,    8.2,    8.8,   9.55,  11.15,  13.24], // popularity
-   //    y: [     63.3,   65.6,   67.9,   62.3,  62.74,  64.58,  62.45], // love
-   // }, {
-   //    label: 'Swift',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [      6.5,    8.1,    6.6,    5.9,    5.1,   4.91,   4.65], // popularity
-   //    y: [     63.9,   65.1,   69.2,   59.5,  63.56,  62.88,  61.42], // love
-   // }, {
-   //    label: 'C',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [     19.0,   23.0,   20.6,   21.8,  21.01,  19.27,  19.34], // popularity
-   //    y: [     41.7,   37.4,   42.5,   33.1,  39.56,  39.68,  43.29], // love
-   // }, {
-   //    label: 'C++',
-   //    text: ['2017', '2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [     22.3,   25.4,   23.5,   23.9,  24.31,  22.55,  22.42], // popularity
-   //    y: [     52.0,   46.7,   52.0,   43.4,  49.24,  48.39,  49.77], // love
-   // }, {
-   //    label: 'Kotlin',
-   //    text: ['2018', '2019', '2020', '2021', '2022', '2023'],
-   //    x: [      4.5,    6.4,    7.8,   8.32,   9.16,   9.06], // popularity
-   //    y: [     75.1,   72.6,   62.9,  61.55,  63.29,  60.77], // love
-   // }, {
-   //    label: 'Dart',
-   //    text: ['2019', '2020', '2021', '2022', '2023'],
-   //    x: [      1.9,    4.0,   6.02,   6.54,   6.02], // popularity
-   //    y: [     66.3,   62.1,  63.77,  62.16,  58.56], // love
-   // }, {
-   //    label: 'HTML/CSS', // in 2018, they're splitted
-   //    text: ['2019', '2020', '2021', '2022', '2023'],
-   //    x: [     63.5,   63.1,  56.07,  55.08,  52.97], // popularity
-   //    y: [     62.2,   53.5,  60.19,  62.09,  61.90], // love
-   // }, {
-   //    label: 'Rust',
-   //    text: ['2019', '2020', '2021', '2022', '2023'],
-   //    x: [      3.2,    5.1,   7.03,   9.32,  13.05], // popularity
-   //    y: [     83.5,   86.1,  86.98,  86.73,  84.66], // love
-   // }
 ]
 
 export default pl_data
