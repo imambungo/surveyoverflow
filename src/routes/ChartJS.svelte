@@ -94,7 +94,7 @@
                      }
 						},
                   annotation: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/usage.html
-                     annotations: {}
+                     annotations: datasets_to_label_annotations(datasets)
                   },
                   title: { // https://www.chartjs.org/docs/latest/configuration/title.html
                      display: true, // false by default
@@ -133,8 +133,8 @@
                      highlight_data_year_of_the_same_dataset(chart, data)
                   }
 
-                  if (active_elements.length == 0) { // make sure there's no annotations
-                     chart.options.plugins.annotation.annotations = {}  // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+                  if (active_elements.length == 0) {
+                     chart.options.plugins.annotation.annotations = datasets_to_label_annotations(datasets)  // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      chart.update()
                   }
                },
@@ -142,7 +142,8 @@
                   point: {
                      hitRadius: 20, // https://www.chartjs.org/docs/latest/configuration/elements.html#point-configuration
                   }
-               }
+               },
+               animations: false, // https://www.chartjs.org/docs/latest/configuration/animations.html#disabling-animation
 				},
 			}
 		)
