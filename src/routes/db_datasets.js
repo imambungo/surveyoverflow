@@ -1,4 +1,4 @@
-const db_data = [
+const db_datasets = [
    {
       label: 'MySQL',
       data: [
@@ -201,4 +201,4 @@ const db_data = [
    }
 ]
 
-export default db_data
+export default db_datasets

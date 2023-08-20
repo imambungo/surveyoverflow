@@ -1,4 +1,4 @@
-const web_frameworks_data = [
+const web_frameworks_datasets = [
    {
       label: 'React',
       data: [
@@ -531,4 +531,4 @@ const web_frameworks_data = [
    }
 ]
 
-export default web_frameworks_data
+export default web_frameworks_datasets

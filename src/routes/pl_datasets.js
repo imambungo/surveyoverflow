@@ -1,4 +1,4 @@
-const pl_data = [
+const pl_datasets = [
    {
       label: 'JavaScript',
       data: [ // https://www.chartjs.org/docs/latest/general/data-structures.html#object-using-custom-properties
@@ -591,4 +591,4 @@ const pl_data = [
    }
 ]
 
-export default pl_data
+export default pl_datasets

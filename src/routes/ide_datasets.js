@@ -1,4 +1,4 @@
-const ide_data = [
+const ide_datasets = [
    {
       label: 'Visual Studio Code',
       data: [
@@ -236,4 +236,4 @@ const ide_data = [
    }
 ]
 
-export default ide_data
+export default ide_datasets

@@ -1,4 +1,4 @@
-const async_tools_data = [
+const async_tools_datasets = [
    {
       label: 'Jira',
       data: [
@@ -121,4 +121,4 @@ const async_tools_data = [
    }
 ]
 
-export default async_tools_data
+export default async_tools_datasets

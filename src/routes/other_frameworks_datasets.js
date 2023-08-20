@@ -1,4 +1,4 @@
-const other_frameworks_data = [
+const other_frameworks_datasets = [
    {
       label: 'React Native',
       data: [
@@ -61,4 +61,4 @@ const other_frameworks_data = [
    }
 ]
 
-export default other_frameworks_data
+export default other_frameworks_datasets

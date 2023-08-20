@@ -24,14 +24,14 @@
 		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/surveyoverflow#contributing'>here</a>.
 	</p>
 
-	<ChartJS datasets={pl_data}               title='Programming, scripting, and markup languages'></ChartJS>
-	<ChartJS datasets={db_data}               title='Databases'></ChartJS>
-	<ChartJS datasets={cloud_platforms_data}  title='Cloud platforms'></ChartJS>
-	<ChartJS datasets={web_frameworks_data}   title='Web frameworks and technologies'></ChartJS>
-	<ChartJS datasets={other_frameworks_data} title='Other frameworks and libraries'></ChartJS>
-	<ChartJS datasets={other_tools_data}      title='Other tools'></ChartJS>
-	<ChartJS datasets={ide_data}              title='Integrated development environment'></ChartJS>
-	<ChartJS datasets={async_tools_data}      title='Asynchronous tools'></ChartJS>
+	<ChartJS datasets={pl_datasets}               title='Programming, scripting, and markup languages'></ChartJS>
+	<ChartJS datasets={db_datasets}               title='Databases'></ChartJS>
+	<ChartJS datasets={cloud_platforms_datasets}  title='Cloud platforms'></ChartJS>
+	<ChartJS datasets={web_frameworks_datasets}   title='Web frameworks and technologies'></ChartJS>
+	<ChartJS datasets={other_frameworks_datasets} title='Other frameworks and libraries'></ChartJS>
+	<ChartJS datasets={other_tools_datasets}      title='Other tools'></ChartJS>
+	<ChartJS datasets={ide_datasets}              title='Integrated development environment'></ChartJS>
+	<ChartJS datasets={async_tools_datasets}      title='Asynchronous tools'></ChartJS>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
@@ -51,14 +51,14 @@
 <script>
 	import ChartJS from './ChartJS.svelte'
 
-	import pl_data from './pl_data.js'
-	import db_data from './db_data.js'
-	import cloud_platforms_data from './cloud_platforms_data.js'
-	import web_frameworks_data from './web_frameworks_data.js'
-	import other_frameworks_data from './other_frameworks_data.js'
-	import other_tools_data from './other_tools_data.js'
-	import ide_data from './ide_data.js'
-	import async_tools_data from './async_tools_data.js'
+	import pl_datasets from './pl_datasets.js'
+	import db_datasets from './db_datasets.js'
+	import cloud_platforms_datasets from './cloud_platforms_datasets.js'
+	import web_frameworks_datasets from './web_frameworks_datasets.js'
+	import other_frameworks_datasets from './other_frameworks_datasets.js'
+	import other_tools_datasets from './other_tools_datasets.js'
+	import ide_datasets from './ide_datasets.js'
+	import async_tools_datasets from './async_tools_datasets.js'
 
 	// onMount(async () => {
 	// 	// new Chart(

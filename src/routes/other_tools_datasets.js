@@ -1,4 +1,4 @@
-const other_tools_data = [ // 2022 onwards. Don't use data from 2021 because git is removed since 2022.
+const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because git is removed since 2022.
    {
       label: 'Docker',
       data: [
@@ -66,4 +66,4 @@ const other_tools_data = [ // 2022 onwards. Don't use data from 2021 because git
    }
 ]
 
-export default other_tools_data
+export default other_tools_datasets

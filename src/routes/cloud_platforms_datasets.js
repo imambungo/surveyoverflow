@@ -1,4 +1,4 @@
-const cloud_platforms_data = [ // don't use data from before 2021 since they're not specifically cloud platforms
+const cloud_platforms_datasets = [ // don't use data from before 2021 since they're not specifically cloud platforms
    {
       label: 'Firebase',
       data: [
@@ -221,4 +221,4 @@ const cloud_platforms_data = [ // don't use data from before 2021 since they're 
    }
 ]
 
-export default cloud_platforms_data
+export default cloud_platforms_datasets
