@@ -28,9 +28,9 @@
    const datasets_to_label_annotations = datasets => {
       const annotations = {}
       datasets.forEach(item => {
-         annotations[item.label] = { // https://stackoverflow.com/a/8317995/9157799
+         annotations[item.label] = { // https://stackoverflow.com/a/8317995/9157799 | https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
             type: 'label',
-            content: item.label, // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+            content: item.label,
             xValue: item.data.at(-1).popularity, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
             yValue: item.data.at(-1).love, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
             font: {
@@ -114,9 +114,9 @@
                         const data_to_year_annotations = (data) => { // because the plugin interaction doesn't support dataset mode:  https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/options.html#interaction
                            const annotations = {}
                            data.forEach(element => {
-                              annotations[element.year] = { // https://stackoverflow.com/a/2241883/9157799
+                              annotations[element.year] = { // https://stackoverflow.com/a/2241883/9157799 | https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
                                  type: 'label',
-                                 content: element.year, // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+                                 content: element.year,
                                  xValue: element.popularity,
                                  yValue: element.love,
                                  font: {
