@@ -33,9 +33,11 @@
             content: item.label,
             xValue: item.data.at(-1).popularity, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
             yValue: item.data.at(-1).love, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
+            yAdjust: -11,
             font: {
                size: 14 // https://tailwindcss.com/docs/font-size
             },
+            color: 'rgba(40,40,40)',
          }
       })
       return annotations
@@ -120,14 +122,16 @@
                                  xValue: element.popularity,
                                  yValue: element.love,
                                  font: {
-                                    size: 14 // https://tailwindcss.com/docs/font-size
+                                    size: 12 // https://tailwindcss.com/docs/font-size
                                  },
+                                 color: 'rgba(70,70,70)',
+                                 yAdjust: 11,
                               }
                            })
                            return annotations
                         }
 
-                        chart.options.plugins.annotation.annotations = data_to_year_annotations(data) // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+                        chart.options.plugins.annotation.annotations = {...datasets_to_label_annotations(datasets), ...data_to_year_annotations(data)} // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                         chart.update()                                                           // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      }
                      highlight_data_year_of_the_same_dataset(chart, data)
