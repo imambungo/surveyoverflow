@@ -8,7 +8,8 @@
 <script>
    import { onMount } from 'svelte' // https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294
 
-   import { Chart,
+   import {
+      Chart,
 		ScatterController, LinearScale, PointElement, LineElement,
       Title,                                                     // https://stackoverflow.com/a/75210481/9157799
       Colors,
