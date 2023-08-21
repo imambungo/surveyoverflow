@@ -9,6 +9,7 @@
    import { Chart,
 		ScatterController, LinearScale, PointElement, LineElement,
       Title,                                                     // https://stackoverflow.com/a/75210481/9157799
+      Colors,
 	} from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
 	import zoomPlugin from "chartjs-plugin-zoom" // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76910295/9157799
    import annotationPlugin from 'chartjs-plugin-annotation' // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/
@@ -18,6 +19,7 @@
       annotationPlugin,                                          // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/integration.html
 		ScatterController, LinearScale, PointElement, LineElement, // https://stackoverflow.com/a/67143648/9157799
       Title,                                                     // https://stackoverflow.com/a/75210481/9157799
+      Colors,
 	)
 
    export let datasets
@@ -37,7 +39,7 @@
             font: {
                size: 14 // https://tailwindcss.com/docs/font-size
             },
-            color: 'rgba(40,40,40)',
+            color: 'rgba(45,45,45)',
          }
       })
       return annotations
@@ -124,7 +126,7 @@
                                  font: {
                                     size: 12 // https://tailwindcss.com/docs/font-size
                                  },
-                                 color: 'rgba(70,70,70)',
+                                 color: 'rgba(65,65,65)',
                                  yAdjust: 11,
                               }
                            })
