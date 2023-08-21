@@ -39,7 +39,7 @@
             font: {
                size: 14 // https://tailwindcss.com/docs/font-size
             },
-            color: 'rgba(45,45,45)',
+            color: 'rgba(50,50,50)',
          }
       })
       return annotations
@@ -131,7 +131,19 @@
                            return annotations
                         }
 
-                        chart.options.plugins.annotation.annotations = {...datasets_to_label_annotations(datasets), ...data_to_year_annotations(dataset.data)} // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+                        let label_annotations = datasets_to_label_annotations(datasets)
+                        const dim_all_label_except = (label_annotations, highlighted_label) => {
+                           Object.keys(label_annotations).forEach(key => { // https://stackoverflow.com/a/5737192/9157799
+                              if (key != highlighted_label) {
+                                 label_annotations[key].color = 'rgba(200,200,200)'
+                              } else {
+                                 label_annotations[key].color = 'rgba(30,30,30)'
+                              }
+                           })
+                           return label_annotations // btw JavaScript pass object by reference but whatever: https://stackoverflow.com/q/7574054/9157799
+                        }
+                        label_annotations = dim_all_label_except(label_annotations, dataset.label) // btw JavaScript pass object by reference but whatever: https://stackoverflow.com/q/7574054/9157799
+                        chart.options.plugins.annotation.annotations = {...label_annotations, ...data_to_year_annotations(dataset.data)} // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                         chart.update()                                                           // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      }
                      highlight_data_year_of_the_same_dataset(chart, dataset)
