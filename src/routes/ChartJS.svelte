@@ -110,11 +110,9 @@
 
                   if (active_elements.length > 0) {
                      console.log('AHOY! ' + active_elements.length + ' active elements')
-                     console.log('the first active elements down below')
-                     const data = active_elements[0].element.$context.dataset.data
-                     console.log(data)
+                     const dataset = active_elements[0].element.$context.dataset
 
-                     const highlight_data_year_of_the_same_dataset = (chart, data) => {
+                     const highlight_data_year_of_the_same_dataset = (chart, dataset) => {
                         const data_to_year_annotations = (data) => { // because the plugin interaction doesn't support dataset mode:  https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/options.html#interaction
                            const annotations = {}
                            data.forEach(element => {
@@ -133,10 +131,10 @@
                            return annotations
                         }
 
-                        chart.options.plugins.annotation.annotations = {...datasets_to_label_annotations(datasets), ...data_to_year_annotations(data)} // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+                        chart.options.plugins.annotation.annotations = {...datasets_to_label_annotations(datasets), ...data_to_year_annotations(dataset.data)} // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                         chart.update()                                                           // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      }
-                     highlight_data_year_of_the_same_dataset(chart, data)
+                     highlight_data_year_of_the_same_dataset(chart, dataset)
                   }
 
                   if (active_elements.length == 0) {
