@@ -180,7 +180,7 @@
                               }
                            })
                         }
-                        highlight_dataset_lines_and_points(dataset, datasets)
+                        highlight_dataset_lines_and_points(dataset, datasets)                    // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                         chart.update()                                                           // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      }
                      highlight_dataset(chart, dataset)
