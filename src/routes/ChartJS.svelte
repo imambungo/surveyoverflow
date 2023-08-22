@@ -16,6 +16,7 @@
 	} from 'chart.js' // https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js | https://stackoverflow.com/a/67143648/9157799
 	import zoomPlugin from "chartjs-plugin-zoom" // https://www.chartjs.org/docs/latest/#features | https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://stackoverflow.com/a/76910295/9157799
    import annotationPlugin from 'chartjs-plugin-annotation' // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/
+   import autocolors from 'chartjs-plugin-autocolors' // https://www.chartjs.org/docs/latest/general/colors.html#advanced-color-palettes
 
    Chart.register(
 		zoomPlugin,                                                // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
@@ -23,6 +24,7 @@
 		ScatterController, LinearScale, PointElement, LineElement, // https://stackoverflow.com/a/67143648/9157799
       Title,                                                     // https://stackoverflow.com/a/75210481/9157799
       Colors,
+      autocolors,                                                // https://www.chartjs.org/docs/latest/general/colors.html#advanced-color-palettes
 	)
 
    export let datasets
@@ -107,15 +109,29 @@
                      display: true, // false by default
                      text: title
                   },
+                  autocolors: { // https://github.com/kurkle/chartjs-plugin-autocolors#mode
+                     mode: 'dataset',
+                  }
 					},
                onHover: (event, active_elements, chart) => { // https://www.chartjs.org/docs/latest/configuration/interactions.html#events
                   console.log(event)
+
+                  const change_opacity = (color, value) => {
+                     const get_rgba = (color) => {
+                        const array_of_rgba_string = color.replace(/[^\d,.]/g, '').split(',') // https://stackoverflow.com/q/10970958/9157799#comment47468911_10971090
+                        const array_of_rgba_number = array_of_rgba_string.map(string => Number(string))
+                        return array_of_rgba_number
+                     }
+                     const [r, g, b, a] = get_rgba(color)
+                     const new_color = `rgba(${r},${g},${b},${value})`
+                     return new_color
+                  }
 
                   if (active_elements.length > 0) {
                      console.log('AHOY! ' + active_elements.length + ' active elements')
                      const dataset = active_elements[0].element.$context.dataset
 
-                     const highlight_data_year_of_the_same_dataset = (chart, dataset) => {
+                     const highlight_dataset = (chart, dataset) => {
                         const data_to_year_annotations = (data) => { // because the plugin interaction doesn't support dataset mode:  https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/options.html#interaction
                            const annotations = {}
                            data.forEach(element => {
@@ -135,9 +151,9 @@
                         }
 
                         let label_annotations = datasets_to_label_annotations(datasets)
-                        const dim_all_label_except = (label_annotations, highlighted_label) => {
+                        const dim_all_label_except = (label_annotations, highlighted_dataset_label) => {
                            Object.keys(label_annotations).forEach(key => { // https://stackoverflow.com/a/5737192/9157799
-                              if (key != highlighted_label) {
+                              if (key != highlighted_dataset_label) {
                                  label_annotations[key].color = 'rgba(200,200,200)'
                               } else {
                                  label_annotations[key].color = 'rgba(30,30,30)'
@@ -147,13 +163,36 @@
                         }
                         label_annotations = dim_all_label_except(label_annotations, dataset.label) // btw JavaScript pass object by reference but whatever: https://stackoverflow.com/q/7574054/9157799
                         chart.options.plugins.annotation.annotations = {...label_annotations, ...data_to_year_annotations(dataset.data)} // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+
+                        const highlight_dataset_lines_and_points = (dataset_to_highlight, datasets) => {
+                           console.log(
+                              dataset_to_highlight.backgroundColor, // 0.75
+                              dataset_to_highlight.borderColor      // 0.56
+                           ) // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
+
+                           dataset_to_highlight.backgroundColor = change_opacity(dataset_to_highlight.backgroundColor, 0.9) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
+                           dataset_to_highlight.borderColor = change_opacity(dataset_to_highlight.borderColor, 0.8)
+
+                           datasets.forEach(dataset => {
+                              if (dataset.label != dataset_to_highlight.label) {
+                                 dataset.backgroundColor = change_opacity(dataset.backgroundColor, 0.25)
+                                 dataset.borderColor = change_opacity(dataset.borderColor, 0.1) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
+                              }
+                           })
+                        }
+                        highlight_dataset_lines_and_points(dataset, datasets)
                         chart.update()                                                           // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
                      }
-                     highlight_data_year_of_the_same_dataset(chart, dataset)
+                     highlight_dataset(chart, dataset)
                   }
 
                   if (active_elements.length == 0) {
                      chart.options.plugins.annotation.annotations = datasets_to_label_annotations(datasets)  // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+
+                     datasets.forEach(dataset => {
+                        dataset.backgroundColor = change_opacity(dataset.backgroundColor, 0.75) // // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
+                        dataset.borderColor = change_opacity(dataset.borderColor, 0.56) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
+                     })
                      chart.update()
                   }
                },
