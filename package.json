@@ -24,6 +24,7 @@
   "dependencies": {
     "chart.js": "^4.3.3",
     "chartjs-plugin-annotation": "^3.0.1",
+    "chartjs-plugin-autocolors": "^0.2.2",
     "chartjs-plugin-zoom": "^2.0.1",
     "plotly.js-dist-min": "^2.24.3"
   }
