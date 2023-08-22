@@ -165,10 +165,10 @@
                         chart.options.plugins.annotation.annotations = {...label_annotations, ...data_to_year_annotations(dataset.data)} // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
 
                         const highlight_dataset_lines_and_points = (dataset_to_highlight, datasets) => {
-                           console.log(
-                              dataset_to_highlight.backgroundColor, // 0.75
-                              dataset_to_highlight.borderColor      // 0.56
-                           ) // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
+                           // console.log(
+                           //    dataset_to_highlight.backgroundColor, // 0.75
+                           //    dataset_to_highlight.borderColor      // 0.56
+                           // ) // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
 
                            dataset_to_highlight.backgroundColor = change_opacity(dataset_to_highlight.backgroundColor, 0.9) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
                            dataset_to_highlight.borderColor = change_opacity(dataset_to_highlight.borderColor, 0.8)
