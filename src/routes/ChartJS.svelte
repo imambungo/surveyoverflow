@@ -1,5 +1,5 @@
-<div>
-   <div class='aspect-square landscape:h-[88vh] max-w-5xl'> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
+<div class='w-full'>
+   <div class='aspect-square landscape:max-h-[88vh] max-w-5xl'> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
       <canvas bind:this={canvas} id="acquisitions"></canvas> <!-- https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294 -->
    </div>
    <button on:click={() => chart.resetZoom()} class='bg-slate-100 text-blue-500 rounded-md py-2 px-4 font-medium text-xs ml-8'>Reset zoom</button> <!-- https://stackoverflow.com/a/68294029/9157799 -->
