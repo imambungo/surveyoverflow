@@ -75,6 +75,10 @@
                   yAxisKey: 'popularity',
                },
                plugins: {
+                  title: { // https://www.chartjs.org/docs/latest/configuration/title.html
+                     display: true, // false by default
+                     text: title
+                  },
                   legend: { // https://www.chartjs.org/docs/latest/configuration/legend.html
                      onHover: (event, legendItem, legend) => {
                         console.log(legendItem.datasetIndex)
