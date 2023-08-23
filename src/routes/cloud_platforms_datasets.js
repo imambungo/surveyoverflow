@@ -1,5 +1,25 @@
 const cloud_platforms_datasets = [ // don't use data from before 2021 since they're not specifically cloud platforms
    {
+      label: 'AWS',
+      data: [
+         {
+            year: '2021',
+            popularity: 54.22,
+            love: 66.55
+         },
+         {
+            year: '2022',
+            popularity: 51.01,
+            love: 66.32
+         },
+         {
+            year: '2023',
+            popularity: 48.62,
+            love: 62.24
+         }
+      ]
+   },
+   {
       label: 'Firebase',
       data: [
          {
@@ -199,26 +219,6 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
          }
       ]
    },
-   {
-      label: 'AWS',
-      data: [
-         {
-            year: '2021',
-            popularity: 54.22,
-            love: 66.55
-         },
-         {
-            year: '2022',
-            popularity: 51.01,
-            love: 66.32
-         },
-         {
-            year: '2023',
-            popularity: 48.62,
-            love: 62.24
-         }
-      ]
-   }
 ]
 
 export default cloud_platforms_datasets
