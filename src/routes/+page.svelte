@@ -3,7 +3,7 @@
    <meta name="description" content="See how Stack Overflow Developer Survey results change over the years.">
 </svelte:head>
 
-<div class='lg:max-w-5xl lg:mx-auto flex flex-col gap-10 landscape:items-center'>
+<div class='lg:max-w-5xl lg:mx-auto flex flex-col gap-16 landscape:items-center'>
 	<header class='p-4 mb-4 flex flex-col gap-3 items-center lg:max-w-5xl lg:mx-auto w-full'>
       <div class='flex justify-between w-full'> <!-- website name and social media links -->
          <p class='text-lg font-semibold text-slate-700'>Survey Overflow</p>
@@ -24,6 +24,7 @@
 		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/surveyoverflow#contributing'>here</a>.
 	</p>
 
+	<LineChart datasets={pl_datasets} title='Programming, scripting, and markup languages'></LineChart>
 	<ChartJS datasets={pl_datasets}               title='Programming, scripting, and markup languages'></ChartJS>
 	<ChartJS datasets={db_datasets}               title='Databases'></ChartJS>
 	<ChartJS datasets={cloud_platforms_datasets}  title='Cloud platforms'></ChartJS>
@@ -50,6 +51,7 @@
 
 <script>
 	import ChartJS from './ChartJS.svelte'
+	import LineChart from './LineChart.svelte'
 
 	import pl_datasets from './pl_datasets.js'
 	import db_datasets from './db_datasets.js'
