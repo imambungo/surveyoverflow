@@ -81,7 +81,8 @@
                   },
                   legend: { // https://www.chartjs.org/docs/latest/configuration/legend.html
                      onHover: (event, legendItem, legend) => {
-                        console.log(legendItem.datasetIndex)
+                        if(window.matchMedia("(pointer: coarse)").matches) return // don't detect hover for mobile screen, it will ruin the UX of hiding a dataset on click. https://stackoverflow.com/a/52855084/9157799
+
                         const dataset_to_highlight = datasets[legendItem.datasetIndex] // https://www.chartjs.org/docs/latest/configuration/legend.html#custom-on-click-actions
 
                         // console.log(
