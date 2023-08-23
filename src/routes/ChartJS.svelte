@@ -88,6 +88,9 @@
                   }
                },
 					plugins: { 
+                  tooltip: { // tooltip is registered globally by LineChart.svelte
+                     enabled: false,
+                  },
 						zoom: { // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/usage.html
 							zoom: {
 								wheel: {
