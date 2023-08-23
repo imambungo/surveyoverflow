@@ -20,6 +20,8 @@
    import annotationPlugin from 'chartjs-plugin-annotation' // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/
    import autocolors from 'chartjs-plugin-autocolors' // https://www.chartjs.org/docs/latest/general/colors.html#advanced-color-palettes
 
+   import { change_opacity } from '$lib/change_opacity.js'
+
    Chart.register(
 		zoomPlugin,                                                // https://www.chartjs.org/chartjs-plugin-zoom/latest/guide/integration.html | https://www.chartjs.org/docs/latest/developers/plugins.html#global-plugins
       annotationPlugin,                                          // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/integration.html
@@ -118,17 +120,6 @@
                onHover: (event, active_elements, chart) => { // https://www.chartjs.org/docs/latest/configuration/interactions.html#events
                   //console.log(event)
 
-                  const change_opacity = (color, value) => {
-                     const get_rgba = (color) => {
-                        const array_of_rgba_string = color.replace(/[^\d,.]/g, '').split(',') // https://stackoverflow.com/q/10970958/9157799#comment47468911_10971090
-                        const array_of_rgba_number = array_of_rgba_string.map(string => Number(string))
-                        return array_of_rgba_number
-                     }
-                     const [r, g, b, a] = get_rgba(color)
-                     const new_color = `rgba(${r},${g},${b},${value})`
-                     return new_color
-                  }
-
                   if (active_elements.length > 0) {
                      //console.log('AHOY! ' + active_elements.length + ' active elements')
                      const dataset = active_elements[0].element.$context.dataset
@@ -203,7 +194,7 @@
                      hitRadius: 20, // https://www.chartjs.org/docs/latest/configuration/elements.html#point-configuration
                   }
                },
-               animations: false, // according to the docs, it should be "animation" (without "s") but the one without "s" doesn't work. Whatever. https://www.chartjs.org/docs/latest/configuration/animations.html#disabling-animation
+               animations: false, // according to the docs, it should be "animation" (without "s") but the one without "s" doesn't work. Whatever. https://www.chartjs.org/docs/latest/configuration/animations.html#disabling-animation | https://www.chartjs.org/docs/latest/general/options.html#dataset-animation-options
 				},
 			}
 		)
