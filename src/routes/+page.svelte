@@ -25,14 +25,14 @@
 	</p>
 
 	<LineChart datasets={pl_datasets} title='Programming, scripting, and markup languages'></LineChart>
-	<ChartJS datasets={pl_datasets}               title='Programming, scripting, and markup languages'></ChartJS>
-	<ChartJS datasets={db_datasets}               title='Databases'></ChartJS>
-	<ChartJS datasets={cloud_platforms_datasets}  title='Cloud platforms'></ChartJS>
-	<ChartJS datasets={web_frameworks_datasets}   title='Web frameworks and technologies'></ChartJS>
-	<ChartJS datasets={other_frameworks_datasets} title='Other frameworks and libraries'></ChartJS>
-	<ChartJS datasets={other_tools_datasets}      title='Other tools'></ChartJS>
-	<ChartJS datasets={ide_datasets}              title='Integrated development environment'></ChartJS>
-	<ChartJS datasets={async_tools_datasets}      title='Asynchronous tools'></ChartJS>
+	<ScatterChart datasets={pl_datasets}               title='Programming, scripting, and markup languages'></ScatterChart>
+	<ScatterChart datasets={db_datasets}               title='Databases'></ScatterChart>
+	<ScatterChart datasets={cloud_platforms_datasets}  title='Cloud platforms'></ScatterChart>
+	<ScatterChart datasets={web_frameworks_datasets}   title='Web frameworks and technologies'></ScatterChart>
+	<ScatterChart datasets={other_frameworks_datasets} title='Other frameworks and libraries'></ScatterChart>
+	<ScatterChart datasets={other_tools_datasets}      title='Other tools'></ScatterChart>
+	<ScatterChart datasets={ide_datasets}              title='Integrated development environment'></ScatterChart>
+	<ScatterChart datasets={async_tools_datasets}      title='Asynchronous tools'></ScatterChart>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
 	<div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="db"></div>
@@ -50,7 +50,7 @@
 </div>
 
 <script>
-	import ChartJS from './ChartJS.svelte'
+	import ScatterChart from './ScatterChart.svelte'
 	import LineChart from './LineChart.svelte'
 
 	import pl_datasets from './pl_datasets.js'
