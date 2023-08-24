@@ -2,8 +2,7 @@
    <div class='w-full landscape:h-[75vh] portrait:h-[65vh] max-h-[64rem] max-w-5xl'> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
       <canvas bind:this={canvas}></canvas> <!-- https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294 -->
    </div>
-   <div class='mt-2 px-2 flex justify-between'>
-      <button on:click={() => chart.resetZoom()} class='bg-slate-100 text-blue-500 rounded-md py-2 px-4 font-medium text-xs'>Reset zoom</button> <!-- https://stackoverflow.com/a/68294029/9157799 -->
+   <div class='mt-2 px-2 flex justify-end'>
       <div class='bg-gray-300 rounded-full p-1 w-fit font-semibold text-xs text-white'>
          <button class='px-4 py-1 tracking-tight {popularity_or_love == 'popularity' ? 'rounded-full bg-gray-50 text-gray-700 hover:cursor-default' : ''}' on:click={() => change_yAxisKey('popularity')}>
             Popularity
