@@ -1,5 +1,5 @@
 <div class='w-full'>
-   <div class='w-[100vw] landscape:h-[75vh] portrait:h-[65vh] max-h-[64rem] max-w-5xl'> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
+   <div class='w-full landscape:h-[75vh] portrait:h-[65vh] max-h-[64rem] max-w-5xl'> <!-- https://www.chartjs.org/docs/latest/getting-started/usage.html#build-a-new-application-with-chart-js -->
       <canvas bind:this={canvas}></canvas> <!-- https://stackoverflow.com/q/76910294/9157799#comment135586381_76910294 -->
    </div>
    <div class='mt-2 px-2 flex justify-between'>
