@@ -38,17 +38,17 @@
 
    const datasets_to_label_annotations = datasets => {
       const annotations = {}
-      datasets.forEach(item => {
-         annotations[item.label] = { // https://stackoverflow.com/a/8317995/9157799 | https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
+      datasets.forEach(dataset => {
+         annotations[dataset.label] = { // https://stackoverflow.com/a/8317995/9157799 | https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#label-annotation-specific-options
             type: 'label',
-            content: item.label,
-            xValue: item.data.at(-1).popularity, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
-            yValue: item.data.at(-1).love, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
+            content: dataset.label,
+            xValue: dataset.data.at(-1).popularity, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
+            yValue: dataset.data.at(-1).love, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
             yAdjust: -11,
             font: {
                size: 14 // https://tailwindcss.com/docs/font-size
             },
-            color: change_opacity(item.backgroundColor, 1),
+            color: change_opacity(dataset.backgroundColor, 1),
          }
       })
       return annotations
