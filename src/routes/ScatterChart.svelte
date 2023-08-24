@@ -48,7 +48,7 @@
             font: {
                size: 14 // https://tailwindcss.com/docs/font-size
             },
-            color: 'rgba(50,50,50)',
+            color: change_opacity(item.backgroundColor, 1),
          }
       })
       return annotations
