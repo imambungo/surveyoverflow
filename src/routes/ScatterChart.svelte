@@ -50,6 +50,10 @@
             },
             color: change_opacity(dataset.backgroundColor, 1),
          }
+
+         if (dataset.label_annotation_adjustment) { // EXPERIMENTAL
+            annotations[dataset.label].position = dataset.label_annotation_adjustment.position // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#position
+         }
       })
       return annotations
    }

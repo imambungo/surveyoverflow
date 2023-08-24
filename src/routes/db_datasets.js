@@ -81,6 +81,11 @@ const db_datasets = [
    },
    {
       label: 'MongoDB',
+      label_annotation_adjustment: { // EXPERIMENTAL
+         position: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#position
+            x: 'end'
+         }
+      },
       data: [
          {
             year: '2017',
@@ -121,6 +126,11 @@ const db_datasets = [
    },
    {
       label: 'Microsoft SQL Server',
+      label_annotation_adjustment: { // EXPERIMENTAL
+         position: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#position
+            x: 'start'
+         }
+      },
       data: [
          {
             year: '2017',
