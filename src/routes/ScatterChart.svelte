@@ -46,7 +46,8 @@
             yValue: dataset.data.at(-1).love, // at(-1) --> https://stackoverflow.com/a/3216041/9157799
             yAdjust: -11,
             font: {
-               size: 14 // https://tailwindcss.com/docs/font-size
+               size: 14, // https://tailwindcss.com/docs/font-size
+               weight: undefined, // the default. we wrote it so font-weight goes back to normal after hover | https://www.chartjs.org/docs/master/general/fonts.html
             },
             color: change_opacity(dataset.backgroundColor, 1),
          }
@@ -143,7 +144,7 @@
                                  font: {
                                     size: 12 // https://tailwindcss.com/docs/font-size
                                  },
-                                 color: 'rgba(65,65,65)',
+                                 color: 'rgba(65,65,65, 0.8)',
                                  yAdjust: 11,
                               }
                            })
@@ -154,9 +155,9 @@
                         const dim_all_label_except = (label_annotations, highlighted_dataset_label) => {
                            Object.keys(label_annotations).forEach(key => { // https://stackoverflow.com/a/5737192/9157799
                               if (key != highlighted_dataset_label) {
-                                 label_annotations[key].color = 'rgba(200,200,200)'
+                                 label_annotations[key].color = change_opacity(label_annotations[key].color, 0.5)
                               } else {
-                                 label_annotations[key].color = 'rgba(30,30,30)'
+                                 label_annotations[key].font.weight = 550 // https://www.chartjs.org/docs/master/general/fonts.html | https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
                               }
                            })
                            return label_annotations // btw JavaScript pass object by reference but whatever: https://stackoverflow.com/q/7574054/9157799
