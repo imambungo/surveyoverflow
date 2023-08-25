@@ -47,6 +47,32 @@
       chart.update()
    }
 
+   const highlight_dataset_lines_and_points = (dataset_to_highlight) => {
+      // console.log(
+      //    dataset_to_highlight.backgroundColor, // 0.75
+      //    dataset_to_highlight.borderColor      // 0.56
+      // ) // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
+
+      dataset_to_highlight.backgroundColor = change_opacity(dataset_to_highlight.backgroundColor, 0.9) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
+      dataset_to_highlight.borderColor = change_opacity(dataset_to_highlight.borderColor, 0.8)
+
+      datasets.forEach(dataset => {
+         if (dataset.label != dataset_to_highlight.label) {
+            dataset.backgroundColor = change_opacity(dataset.backgroundColor, 0.25)
+            dataset.borderColor = change_opacity(dataset.borderColor, 0.1) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
+         }
+      })
+      chart.update() // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+   }
+
+   const reset_lines_color = () => {
+      datasets.forEach(dataset => {
+         dataset.backgroundColor = change_opacity(dataset.backgroundColor, 0.75) // // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
+         dataset.borderColor = change_opacity(dataset.borderColor, 0.56) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
+      })
+      chart.update()
+   }
+
    onMount(() => {
       chart = new Chart(
          canvas,
@@ -73,6 +99,16 @@
                   xAxisKey: 'year',
                   yAxisKey: 'popularity',
                },
+               onHover: (event, active_elements, chart) => { // more like onMouseMove. it fires whenever the cursor is moved on the plot area. https://www.chartjs.org/docs/latest/configuration/interactions.html#events
+                  if (active_elements.length > 0) {
+                     const dataset_to_highlight = active_elements[0].element.$context.dataset
+                     highlight_dataset_lines_and_points(dataset_to_highlight)
+                  }
+
+                  if (active_elements.length == 0) {
+                     reset_lines_color()
+                  }
+               },
                plugins: {
                   title: { // https://www.chartjs.org/docs/latest/configuration/title.html
                      display: true, // false by default
@@ -83,29 +119,10 @@
                         if(window.matchMedia("(pointer: coarse)").matches) return // don't detect hover for mobile screen, it will ruin the UX of hiding a dataset on click. https://stackoverflow.com/a/52855084/9157799
 
                         const dataset_to_highlight = datasets[legendItem.datasetIndex] // https://www.chartjs.org/docs/latest/configuration/legend.html#custom-on-click-actions
-
-                        // console.log(
-                        //    dataset_to_highlight.backgroundColor, // 0.75
-                        //    dataset_to_highlight.borderColor      // 0.56
-                        // ) // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
-
-                        dataset_to_highlight.backgroundColor = change_opacity(dataset_to_highlight.backgroundColor, 0.9) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
-                        dataset_to_highlight.borderColor = change_opacity(dataset_to_highlight.borderColor, 0.8)
-
-                        datasets.forEach(dataset => {
-                           if (dataset.label != dataset_to_highlight.label) {
-                              dataset.backgroundColor = change_opacity(dataset.backgroundColor, 0.25)
-                              dataset.borderColor = change_opacity(dataset.borderColor, 0.1) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
-                           }
-                        })
-                        chart.update()                                                           // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+                        highlight_dataset_lines_and_points(dataset_to_highlight)
                      },
                      onLeave: (event, legendItem, legend) => {
-                        datasets.forEach(dataset => {
-                           dataset.backgroundColor = change_opacity(dataset.backgroundColor, 0.75) // // the default opacity is 0.75 and 0.56 using autocolors plugin: https://github.com/kurkle/chartjs-plugin-autocolors
-                           dataset.borderColor = change_opacity(dataset.borderColor, 0.56) // https://www.chartjs.org/docs/latest/samples/line/styling.html https://www.chartjs.org/docs/latest/configuration/elements.html#line-configuration
-                        })
-                        chart.update()
+                        reset_lines_color()
                      }
                   }
                },
