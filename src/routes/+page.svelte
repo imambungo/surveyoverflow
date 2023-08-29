@@ -13,7 +13,7 @@
       </div>
       <div class='my-4 flex flex-col items-center gap-3 w-full'> <!-- header 1 and header text -->
          <h1 class='mt-3 text-2xl font-semibold text-slate-800 text-center w-full'>
-            Stack Overflow Developer Survey trends.
+            Stack Overflow Developer Survey trends
          </h1>
          <p class='text-slate-600 text-center w-full leading-snug'>
 				See how the result of the Stack Overflow survey changes over the years.
