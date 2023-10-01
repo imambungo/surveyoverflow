@@ -1,6 +1,7 @@
 <svelte:head>
    <title>Survey Overflow - Stack Overflow survey trends over the years</title>
    <meta name="description" content="See how Stack Overflow Developer Survey results change over the years.">
+   <link rel="canonical" href="https://surveyoverflow.com/">
 </svelte:head>
 
 <div class='lg:max-w-5xl lg:mx-auto flex flex-col gap-16 landscape:items-center'>
