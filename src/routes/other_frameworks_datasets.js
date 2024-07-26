@@ -26,7 +26,12 @@ const other_frameworks_datasets = [
             year: '2023',
             popularity: 8.43,
             love: 54.0
-         }
+         },
+         {
+            year: '2024',
+            popularity: 8.4,
+            love: 56.5
+         },
       ]
    },
    {
@@ -56,7 +61,12 @@ const other_frameworks_datasets = [
             year: '2023',
             popularity: 9.12,
             love: 64.43
-         }
+         },
+         {
+            year: '2024',
+            popularity: 9.4,
+            love: 60.6
+         },
       ]
    }
 ]

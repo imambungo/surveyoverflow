@@ -37,6 +37,11 @@ const pl_datasets = [
             popularity: 63.61,
             love: 57.83,
          },
+         {
+            year: '2024',
+            popularity: 62.3,
+            love: 58.3,
+         },
       ],
    }, {
       label: 'SQL',
@@ -75,7 +80,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 48.66,
             love: 64.26
-         }
+         },
+         {
+            year: '2024',
+            popularity: 51,
+            love: 67.4
+         },
       ],
    }, {
       label: 'Java',
@@ -114,7 +124,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 30.55,
             love: 44.11
-         }
+         },
+         {
+            year: '2024',
+            popularity: 30.3,
+            love: 47.6
+         },
       ],
    }, {
       label: 'C#',
@@ -153,7 +168,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 27.62,
             love: 62.87
-         }
+         },
+         {
+            year: '2024',
+            popularity: 27.1,
+            love: 64.1
+         },
       ],
    }, {
       label: 'Python',
@@ -192,7 +212,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 49.28,
             love: 65.52
-         }
+         },
+         {
+            year: '2024',
+            popularity: 51,
+            love: 67.6
+         },
       ],
    }, {
       label: 'PHP',
@@ -231,7 +256,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 18.58,
             love: 41.83
-         }
+         },
+         {
+            year: '2024',
+            popularity: 18.2,
+            love: 43.8
+         },
       ],
    }, {
       label: 'TypeScript',
@@ -270,7 +300,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 38.87,
             love: 71.7
-         }
+         },
+         {
+            year: '2024',
+            popularity: 38.5,
+            love: 69.5
+         },
       ],
    }, {
       label: 'Ruby',
@@ -309,7 +344,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 6.23,
             love: 47.69
-         }
+         },
+         {
+            year: '2024',
+            popularity: 5.2,
+            love: 50.1
+         },
       ],
    }, {
       label: 'Go',
@@ -348,7 +388,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 13.24,
             love: 62.45
-         }
+         },
+         {
+            year: '2024',
+            popularity: 13.5,
+            love: 67.7
+         },
       ],
    }, {
       label: 'Swift',
@@ -387,7 +432,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 4.65,
             love: 61.42
-         }
+         },
+         {
+            year: '2024',
+            popularity: 4.7,
+            love: 63.3
+         },
       ],
    }, {
       label: 'C',
@@ -426,7 +476,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 19.34,
             love: 43.29
-         }
+         },
+         {
+            year: '2024',
+            popularity: 20.3,
+            love: 47.4
+         },
       ],
    }, {
       label: 'C++',
@@ -465,7 +520,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 22.42,
             love: 49.77
-         }
+         },
+         {
+            year: '2024',
+            popularity: 23,
+            love: 53.1
+         },
       ],
    }, {
       label: 'Kotlin',
@@ -499,7 +559,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 9.06,
             love: 60.77
-         }
+         },
+         {
+            year: '2024',
+            popularity: 9.4,
+            love: 60.9
+         },
       ],
    }, {
       label: 'Dart',
@@ -528,7 +593,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 6.02,
             love: 58.56
-         }
+         },
+         {
+            year: '2024',
+            popularity: 6,
+            love: 55
+         },
       ],
    }, {
       label: 'HTML/CSS',
@@ -557,7 +627,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 52.97,
             love: 61.9
-         }
+         },
+         {
+            year: '2024',
+            popularity: 52.9,
+            love: 62.4
+         },
       ],
    }, {
       label: 'Rust',
@@ -586,7 +661,12 @@ const pl_datasets = [
             year: '2023',
             popularity: 13.05,
             love: 84.66
-         }
+         },
+         {
+            year: '2024',
+            popularity: 12.6,
+            love: 82.2
+         },
       ],
    }
 ]

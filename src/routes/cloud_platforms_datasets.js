@@ -16,7 +16,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 48.62,
             love: 62.24
-         }
+         },
+         {
+            year: '2024',
+            popularity: 48,
+            love: 63.3
+         },
       ]
    },
    {
@@ -31,7 +36,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 15.47,
             love: 54.46
-         }
+         },
+         {
+            year: '2024',
+            popularity: 13.9,
+            love: 54.8
+         },
       ]
    },
    {
@@ -46,7 +56,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 3.96,
             love: 49.98
-         }
+         },
+         {
+            year: '2024',
+            popularity: 3.1,
+            love: 55.2
+         },
       ]
    },
    {
@@ -56,7 +71,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 15.24,
             love: 66.19
-         }
+         },
+         {
+            year: '2024',
+            popularity: 15.1,
+            love: 68.2
+         },
       ]
    },
    {
@@ -66,7 +86,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 4.41,
             love: 70.09
-         }
+         },
+         {
+            year: '2024',
+            popularity: 5,
+            love: 74.6
+         },
       ]
    },
    {
@@ -76,7 +101,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 10.68,
             love: 69.18
-         }
+         },
+         {
+            year: '2024',
+            popularity: 11.9,
+            love: 59.4
+         },
       ]
    },
    {
@@ -86,7 +116,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 1.95,
             love: 50.77
-         }
+         },
+         {
+            year: '2024',
+            popularity: 1.7,
+            love: 51.1
+         },
       ]
    },
    {
@@ -96,7 +131,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 8.95,
             love: 52.73
-         }
+         },
+         {
+            year: '2024',
+            popularity: 7,
+            love: 49.4
+         },
       ]
    },
    {
@@ -116,7 +156,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 23.86,
             love: 55.13
-         }
+         },
+         {
+            year: '2024',
+            popularity: 25.1,
+            love: 55.6
+         },
       ]
    },
    {
@@ -136,7 +181,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 26.03,
             love: 59.93
-         }
+         },
+         {
+            year: '2024',
+            popularity: 27.8,
+            love: 59.9
+         },
       ]
    },
    {
@@ -156,7 +206,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 13.37,
             love: 53.04
-         }
+         },
+         {
+            year: '2024',
+            popularity: 11.7,
+            love: 56.6
+         },
       ]
    },
    {
@@ -176,7 +231,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 12.02,
             love: 21.97
-         }
+         },
+         {
+            year: '2024',
+            popularity: 8.2,
+            love: 25.8
+         },
       ]
    },
    {
@@ -196,7 +256,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 2.6,
             love: 55.08
-         }
+         },
+         {
+            year: '2024',
+            popularity: 2.9,
+            love: 56.3
+         },
       ]
    },
    {
@@ -216,7 +281,12 @@ const cloud_platforms_datasets = [ // don't use data from before 2021 since they
             year: '2023',
             popularity: 1.15,
             love: 32.21
-         }
+         },
+         {
+            year: '2024',
+            popularity: 1.1,
+            love: 40.3
+         },
       ]
    },
 ]

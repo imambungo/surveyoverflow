@@ -36,7 +36,12 @@ const db_datasets = [
             year: '2023',
             popularity: 41.09,
             love: 50.77
-         }
+         },
+         {
+            year: '2024',
+            popularity: 40.3,
+            love: 52.5
+         },
       ]
    },
    {
@@ -76,7 +81,12 @@ const db_datasets = [
             year: '2023',
             popularity: 45.55,
             love: 71.32
-         }
+         },
+         {
+            year: '2024',
+            popularity: 48.7,
+            love: 74.5
+         },
       ]
    },
    {
@@ -121,7 +131,12 @@ const db_datasets = [
             year: '2023',
             popularity: 25.52,
             love: 55.21
-         }
+         },
+         {
+            year: '2024',
+            popularity: 24.8,
+            love: 55.4
+         },
       ]
    },
    {
@@ -166,7 +181,12 @@ const db_datasets = [
             year: '2023',
             popularity: 26.87,
             love: 54.95
-         }
+         },
+         {
+            year: '2024',
+            popularity: 25.3,
+            love: 54.5
+         },
       ]
    },
    {
@@ -206,7 +226,12 @@ const db_datasets = [
             year: '2023',
             popularity: 30.9,
             love: 58.96
-         }
+         },
+         {
+            year: '2024',
+            popularity: 33.1,
+            love: 62.7
+         },
       ]
    }
 ]

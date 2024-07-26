@@ -11,7 +11,12 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
             year: '2023',
             popularity: 51.55,
             love: 74.99
-         }
+         },
+         {
+            year: '2024',
+            popularity: 53.9,
+            love: 77.5
+         },
       ]
    },
    {
@@ -26,7 +31,12 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
             year: '2023',
             popularity: 21.86,
             love: 54.44
-         }
+         },
+         {
+            year: '2024',
+            popularity: 18.8,
+            love: 51
+         },
       ]
    },
    {
@@ -36,7 +46,12 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
             year: '2023',
             popularity: 6.28,
             love: 71.86
-         }
+         },
+         {
+            year: '2024',
+            popularity: 8.9,
+            love: 68.1
+         },
       ]
    },
    {
@@ -46,7 +61,12 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
             year: '2023',
             popularity: 0.77,
             love: 66.77
-         }
+         },
+         {
+            year: '2024',
+            popularity: 3.8,
+            love: 76.1
+         },
       ]
    },
    {
@@ -61,7 +81,12 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
             year: '2023',
             popularity: 49.36,
             love: 59.67
-         }
+         },
+         {
+            year: '2024',
+            popularity: 49.6,
+            love: 59.8
+         },
       ]
    }
 ]
