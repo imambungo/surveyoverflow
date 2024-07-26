@@ -365,6 +365,36 @@ const web_frameworks_datasets = [
       ]
    },
    {
+      label: 'Htmx',
+      data: [
+         {
+            year: '2024',
+            popularity: 3.3,
+            love: 72.9
+         },
+      ]
+   },
+   {
+      label: 'Phoenix',
+      data: [
+         {
+            year: '2022',
+            popularity: 2.13,
+            love: 83.51
+         },
+         {
+            year: '2023',
+            popularity: 2.04,
+            love: 82.08
+         },
+         {
+            year: '2024',
+            popularity: 1.9,
+            love: 83.7
+         },
+      ]
+   },
+   {
       label: 'FastAPI',
       data: [
          {
