@@ -60,6 +60,16 @@ const async_tools_datasets = [
       ]
    },
    {
+      label: 'Obsidian',
+      data: [
+         {
+            year: '2024',
+            popularity: 13,
+            love: 75.9
+         },
+      ]
+   },
+   {
       label: 'Asana',
       data: [
          {
