@@ -11,7 +11,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 52.37,
             love: 53.10
-         }
+         },
+         {
+            year: '2024',
+            popularity: 51.4,
+            love: 55.4
+         },
       ]
    },
    {
@@ -26,7 +31,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 19.36,
             love: 46.94
-         }
+         },
+         {
+            year: '2024',
+            popularity: 19,
+            love: 45.4
+         },
       ]
    },
    {
@@ -41,7 +51,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 17.8,
             love: 64.28
-         }
+         },
+         {
+            year: '2024',
+            popularity: 18.2,
+            love: 60.7
+         },
       ]
    },
    {
@@ -56,7 +71,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 5.04,
             love: 36.95
-         }
+         },
+         {
+            year: '2024',
+            popularity: 4.7,
+            love: 38.9
+         },
       ]
    },
    {
@@ -71,7 +91,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 2.13,
             love: 38.50
-         }
+         },
+         {
+            year: '2024',
+            popularity: 2.3,
+            love: 34.9
+         },
       ]
    },
    {
@@ -81,7 +106,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 2.07,
             love: 74.03
-         }
+         },
+         {
+            year: '2024',
+            popularity: 2.8,
+            love: 69.7
+         },
       ]
    },
    {
@@ -91,7 +121,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 26.17,
             love: 81.83
-         }
+         },
+         {
+            year: '2024',
+            popularity: 29.1,
+            love: 84.3
+         },
       ]
    },
    {
@@ -101,7 +136,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 16.98,
             love: 70.19
-         }
+         },
+         {
+            year: '2024',
+            popularity: 17.9,
+            love: 70.5
+         },
       ]
    },
    {
@@ -116,7 +156,12 @@ const async_tools_datasets = [
             year: '2023',
             popularity: 34.16,
             love: 50.10
-         }
+         },
+         {
+            year: '2024',
+            popularity: 31.6,
+            love: 52.5
+         },
       ]
    }
 ]
