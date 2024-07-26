@@ -21,9 +21,11 @@
          </p>
       </div>
    </header>
+	<!--
 	<p class='p-4 text-sm text-slate-500'>
 		Note: The data isn't currently complete. If there's some data you want to add, you can submit a PR <a class='text-sky-500' target='_blank' href='https://github.com/imambungo/surveyoverflow#contributing'>here</a>.
 	</p>
+	-->
 
 	<LineChart    datasets={pl_datasets}               title='Programming, scripting, and markup languages'></LineChart>
 	<ScatterChart datasets={pl_datasets}               title='Programming, scripting, and markup languages'></ScatterChart>
