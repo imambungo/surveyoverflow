@@ -275,6 +275,21 @@ const web_frameworks_datasets = [
       ]
    },
    {
+      label: 'NestJS',
+      data: [
+         {
+            year: '2023',
+            popularity: 5.13,
+            love: 60.2
+         },
+         {
+            year: '2024',
+            popularity: 5.8,
+            love: 60.8
+         },
+      ]
+   },
+   {
       label: 'Ruby on Rails',
       data: [
          {
