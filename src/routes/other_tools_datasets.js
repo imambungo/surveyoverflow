@@ -20,6 +20,41 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
       ]
    },
    {
+      label: 'Kubernetes',
+      data: [
+         {
+            year: '2019',
+            popularity: 8.5,
+            love: 76.8
+         },
+         {
+            year: '2020',
+            popularity: 11.5,
+            love: 71.1
+         },
+         {
+            year: '2021',
+            popularity: 16.6,
+            love: 72.48
+         },
+         {
+            year: '2022',
+            popularity: 22.99,
+            love: 74.75
+         },
+         {
+            year: '2023',
+            popularity: 19.02,
+            love: 71.27
+         },
+         {
+            year: '2024',
+            popularity: 19.4,
+            love: 72.4
+         },
+      ]
+   },
+   {
       label: 'Yarn',
       data: [
          {
