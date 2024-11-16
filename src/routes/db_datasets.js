@@ -135,6 +135,46 @@ const db_datasets = [
       ]
    },
    {
+      label: 'Elasticsearch',
+      data: [
+         {
+            year: '2018',
+            popularity: 14.1,
+            love: 59.9
+         },
+         {
+            year: '2019',
+            popularity: 14.3,
+            love: 63.6
+         },
+         {
+            year: '2020',
+            popularity: 13.8,
+            love: 58.7
+         },
+         {
+            year: '2021',
+            popularity: 13.27,
+            love: 56.7
+         },
+         {
+            year: '2022',
+            popularity: 12.21,
+            love: 55.92
+         },
+         {
+            year: '2023',
+            popularity: 13.39,
+            love: 49.98
+         },
+         {
+            year: '2024',
+            popularity: 12.5,
+            love: 49.8
+         },
+      ]
+   },
+   {
       label: 'MongoDB',
       label_annotation_adjustment: { // EXPERIMENTAL
          position: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#position
