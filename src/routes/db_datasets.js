@@ -90,6 +90,51 @@ const db_datasets = [
       ]
    },
    {
+      label: 'Redis',
+      data: [
+         {
+            year: '2017',
+            popularity: 14.1,
+            love: 64.8
+         },
+         {
+            year: '2018',
+            popularity: 18,
+            love: 64.5
+         },
+         {
+            year: '2019',
+            popularity: 18.6,
+            love: 71.3
+         },
+         {
+            year: '2020',
+            popularity: 18.3,
+            love: 66.5
+         },
+         {
+            year: '2021',
+            popularity: 20.69,
+            love: 70.71
+         },
+         {
+            year: '2022',
+            popularity: 22.13,
+            love: 71.04
+         },
+         {
+            year: '2023',
+            popularity: 20.41,
+            love: 69.92
+         },
+         {
+            year: '2024',
+            popularity: 20,
+            love: 67
+         },
+      ]
+   },
+   {
       label: 'MongoDB',
       label_annotation_adjustment: { // EXPERIMENTAL
          position: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/types/label.html#position
