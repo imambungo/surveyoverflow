@@ -115,7 +115,7 @@
                      }
 						},
                   annotation: { // https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/usage.html
-                     annotations: datasets_to_label_annotations(datasets)
+                     // Since the colors isn't generated yet, we update the annotation after the chart is initialized
                   },
                   title: { // https://www.chartjs.org/docs/latest/configuration/title.html
                      display: true, // false by default
@@ -206,5 +206,7 @@
 				},
 			}
 		)
+      chart.options.plugins.annotation.annotations = datasets_to_label_annotations(datasets)  // https://www.chartjs.org/docs/latest/developers/updates.html#updating-options
+      chart.update()
    })
 </script>
