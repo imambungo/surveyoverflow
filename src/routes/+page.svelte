@@ -27,28 +27,28 @@
 	</p>
 	-->
 
-	<LineChart    datasets={pl_datasets}               title='Programming, scripting, and markup languages'></LineChart>
+	<!-- <LineChart    datasets={pl_datasets}               title='Programming, scripting, and markup languages'></LineChart> -->
 	<ScatterChart datasets={pl_datasets}               title='Programming, scripting, and markup languages'></ScatterChart>
 
-	<LineChart    datasets={db_datasets}               title='Databases'></LineChart>
+	<!-- <LineChart    datasets={db_datasets}               title='Databases'></LineChart> -->
 	<ScatterChart datasets={db_datasets}               title='Databases'></ScatterChart>
 
-	<LineChart    datasets={cloud_platforms_datasets}  title='Cloud platforms'></LineChart>
+	<!-- <LineChart    datasets={cloud_platforms_datasets}  title='Cloud platforms'></LineChart> -->
 	<ScatterChart datasets={cloud_platforms_datasets}  title='Cloud platforms'></ScatterChart>
 
-	<LineChart    datasets={web_frameworks_datasets}   title='Web frameworks and technologies'></LineChart>
+	<!-- <LineChart    datasets={web_frameworks_datasets}   title='Web frameworks and technologies'></LineChart> -->
 	<ScatterChart datasets={web_frameworks_datasets}   title='Web frameworks and technologies'></ScatterChart>
 
-	<LineChart    datasets={other_frameworks_datasets} title='Other frameworks and libraries'></LineChart>
+	<!-- <LineChart    datasets={other_frameworks_datasets} title='Other frameworks and libraries'></LineChart> -->
 	<ScatterChart datasets={other_frameworks_datasets} title='Other frameworks and libraries'></ScatterChart>
 
-	<LineChart    datasets={other_tools_datasets}      title='Other tools'></LineChart>
+	<!-- <LineChart    datasets={other_tools_datasets}      title='Other tools'></LineChart> -->
 	<ScatterChart datasets={other_tools_datasets}      title='Other tools'></ScatterChart>
 
-	<LineChart    datasets={ide_datasets}              title='Integrated development environment'></LineChart>
+	<!-- <LineChart    datasets={ide_datasets}              title='Integrated development environment'></LineChart> -->
 	<ScatterChart datasets={ide_datasets}              title='Integrated development environment'></ScatterChart>
 
-	<LineChart    datasets={async_tools_datasets}      title='Asynchronous tools'></LineChart>
+	<!-- <LineChart    datasets={async_tools_datasets}      title='Asynchronous tools'></LineChart> -->
 	<ScatterChart datasets={async_tools_datasets}      title='Asynchronous tools'></ScatterChart>
 
 	<!-- <div class='aspect-square landscape:h-[90vh] max-w-5xl max-h-[64rem]' id="programming_languages"></div> <!~~ https://plotly.com/javascript/getting-started/ ~~>
