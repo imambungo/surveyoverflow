@@ -20,6 +20,41 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
       ]
    },
    {
+      label: 'Ansible',
+      data: [
+         {
+            year: '2019',
+            popularity: 9.4,
+            love: 61.7
+         },
+         {
+            year: '2020',
+            popularity: 7.3,
+            love: 58.5
+         },
+         {
+            year: '2021',
+            popularity: 7.68,
+            love: 55.98
+         },
+         {
+            year: '2022',
+            popularity: 9.49,
+            love: 57.87
+         },
+         {
+            year: '2023',
+            popularity: 8.62,
+            love: 55.11
+         },
+         {
+            year: '2024',
+            popularity: 7.9,
+            love: 59
+         },
+      ]
+   },
+   {
       label: 'Kubernetes',
       data: [
          // {
