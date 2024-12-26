@@ -90,6 +90,41 @@ const async_tools_datasets = [
       ]
    },
    {
+      label: 'ClickUp',
+      data: [
+         {
+            year: '2022',
+            popularity: 5.52,
+            love: 50.81
+         },
+         {
+            year: '2023',
+            popularity: 4.02,
+            love: 44.58
+         },
+         {
+            year: '2024',
+            popularity: 4.3,
+            love: 44
+         },
+      ]
+   },
+   {
+      label: 'Basecamp',
+      data: [
+         {
+            year: '2023',
+            popularity: 1.61,
+            love: 33.82
+         },
+         {
+            year: '2024',
+            popularity: 1.5,
+            love: 39.5
+         },
+      ]
+   },
+   {
       label: 'Airtable',
       data: [
          {
