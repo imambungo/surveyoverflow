@@ -55,6 +55,31 @@ const other_tools_datasets = [ // 2022 onwards. Don't use data from 2021 because
       ]
    },
    {
+      label: 'Terraform',
+      data: [
+         {
+            year: '2021',
+            popularity: 7.46,
+            love: 68.69
+         },
+         {
+            year: '2022',
+            popularity: 11.22,
+            love: 69.22
+         },
+         {
+            year: '2023',
+            popularity: 11.3,
+            love: 68.46
+         },
+         {
+            year: '2024',
+            popularity: 10.6,
+            love: 65.9
+         },
+      ]
+   },
+   {
       label: 'Kubernetes',
       data: [
          // {
